@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#6B21A8">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<title>MLT – Free Medical Laboratory Technology Study Hub</title>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1SXDV67490"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-1SXDV67490');
+</script>
+<meta name="description" content="Free semester-wise study material, practical books, MCQ banks, and 1-on-1 guidance for MLT students in Pakistan.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  /* Gram Stain Palette — Crystal Violet + Safranin */
+  --gram-violet:#6B21A8;
+  --gram-violet-dark:#4C1D95;
+  --gram-violet-deep:#3B0764;
+  --gram-violet-light:#7C3AED;
+  --gram-violet-mid:#A855F7;
+  --gram-violet-pale:#F3E8FF;
+  --gram-violet-soft:#EDE9FE;
+  --gram-pink:#BE185D;
+  --gram-pink-light:#EC4899;
+  --gram-pink-pale:#FCE7F3;
+  --gram-pink-mid:#F472B6;
+  /* Accent */
+  --amber:#BA7517;--amber-light:#FAEEDA;--amber-mid:#EF9F27;
+  --green-bg:#EAF3DE;--green-text:#3B6D11;--green-bdr:#97C459;
+  --book-bg:#F0EEFF;--book-text:#4B45B2;--book-bdr:rgba(75,69,178,0.2);
+  /* Neutrals */
+  --ink:#1a1a1a;--ink-light:#3d3d3d;--muted:#6b7280;
+  --surface:#faf8ff;--white:#ffffff;
+  --border:rgba(107,33,168,0.13);
+  --shadow-sm:0 2px 12px rgba(107,33,168,0.08);
+  --shadow-md:0 8px 32px rgba(107,33,168,0.12);
+  --shadow-lg:0 16px 48px rgba(107,33,168,0.16);
+  --radius-sm:8px;--radius-md:12px;--radius-lg:20px;--radius-xl:28px;
+}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:'DM Sans',sans-serif;background:var(--surface);color:var(--ink);overflow-x:hidden;line-height:1.6;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+h1,h2,h3{font-family:'DM Serif Display',serif;line-height:1.15}
+p{line-height:1.7}
+
+/* ── CURSOR GLOW ── */
+.cursor-glow{position:fixed;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(168,85,247,0.07) 0%,transparent 70%);pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:opacity 0.3s;opacity:0}
+
+/* ── NAV ── */
+nav{position:sticky;top:0;z-index:200;background:rgba(250,248,255,0.93);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:0 2.5rem;display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-family:'DM Serif Display',serif;font-size:1.5rem;background:linear-gradient(135deg,var(--gram-violet),var(--gram-pink));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:flex;align-items:center;gap:10px;text-decoration:none;transition:transform 0.2s}
+.logo:hover{transform:scale(1.03)}
+.logo-icon{width:36px;height:36px;background:linear-gradient(135deg,var(--gram-violet),var(--gram-pink));border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;animation:logoPulse 3s ease-in-out infinite;-webkit-text-fill-color:initial}
+.logo-text-wrap{display:flex;flex-direction:column;line-height:1.15}
+.logo-sub{font-size:0.6rem;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;color:var(--muted);-webkit-text-fill-color:var(--muted);background:none}
+@keyframes logoPulse{0%,100%{box-shadow:0 0 0 0 rgba(107,33,168,0.4)}50%{box-shadow:0 0 0 8px rgba(107,33,168,0)}}
+.nav-links{display:flex;gap:1.75rem;align-items:center;list-style:none}
+.nav-links a{text-decoration:none;color:var(--ink-light);font-size:0.875rem;font-weight:500;transition:color 0.2s;position:relative}
+.nav-links a:not(.btn-nav)::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:2px;background:linear-gradient(90deg,var(--gram-violet),var(--gram-pink));border-radius:1px;transition:width 0.2s}
+.nav-links a:not(.btn-nav):hover::after{width:100%}
+.nav-links a:hover{color:var(--gram-violet)}
+.btn-nav{background:linear-gradient(135deg,var(--gram-violet),var(--gram-pink))!important;color:white!important;padding:9px 22px;border-radius:999px;font-size:0.875rem;font-weight:600;transition:all 0.2s!important;display:inline-flex;align-items:center;gap:6px;box-shadow:0 4px 14px rgba(107,33,168,0.3);-webkit-text-fill-color:white!important}
+.btn-nav:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(107,33,168,0.45)!important}
+.nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:4px;font-size:22px;color:var(--ink)}
+
+/* ── HERO ── */
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:5rem 2rem 4rem;position:relative;overflow:hidden;background:linear-gradient(160deg,var(--gram-violet-deep) 0%,var(--gram-violet) 50%,var(--gram-pink) 100%)}
+
+/* Floating orbs */
+.hero-orb{position:absolute;border-radius:50%;pointer-events:none;filter:blur(60px)}
+.orb-1{width:700px;height:700px;background:rgba(255,255,255,0.06);top:-200px;right:-200px;animation:orbFloat1 10s ease-in-out infinite}
+.orb-2{width:500px;height:500px;background:rgba(244,114,182,0.12);bottom:-150px;left:-150px;animation:orbFloat2 12s ease-in-out infinite}
+.orb-3{width:300px;height:300px;background:rgba(255,255,255,0.05);top:40%;left:10%;animation:orbFloat1 8s ease-in-out infinite reverse}
+.orb-4{width:200px;height:200px;background:rgba(168,85,247,0.2);top:20%;right:20%;animation:orbFloat2 7s ease-in-out infinite}
+@keyframes orbFloat1{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(25px,-25px) scale(1.06)}}
+@keyframes orbFloat2{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-20px,30px) scale(1.04)}}
+
+/* Grid overlay */
+.hero-grid-overlay{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.03) 1px,transparent 1px);background-size:60px 60px;pointer-events:none}
+
+/* Particles */
+.hero-particles{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.particle{position:absolute;border-radius:50%;background:rgba(244,114,182,0.5);animation:particleFloat linear infinite}
+@keyframes particleFloat{0%{transform:translateY(100vh) scale(0);opacity:0}10%{opacity:1}90%{opacity:1}100%{transform:translateY(-100px) scale(1);opacity:0}}
+
+/* Gram stain slide animation */
+.stain-slide{position:absolute;inset:0;pointer-events:none;overflow:hidden;opacity:0.06}
+.stain-cell{position:absolute;border-radius:50%;border:2px solid rgba(244,114,182,0.8);animation:cellFloat linear infinite}
+@keyframes cellFloat{0%{transform:translateY(110vh) rotate(0deg);opacity:0}10%{opacity:1}90%{opacity:1}100%{transform:translateY(-10vh) rotate(360deg);opacity:0}}
+
+.hero-inner{text-align:center;position:relative;z-index:1;max-width:860px;margin:0 auto}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);border-radius:999px;padding:7px 20px;font-size:0.75rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.9);margin-bottom:1.75rem;backdrop-filter:blur(8px);animation:fadeInDown 0.8s ease both}
+@keyframes fadeInDown{from{opacity:0;transform:translateY(-15px)}to{opacity:1;transform:translateY(0)}}
+.hero-eyebrow-dot{width:7px;height:7px;border-radius:50%;background:var(--gram-pink-mid);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.5;transform:scale(1.6)}}
+.hero h1{font-family:'DM Serif Display',serif;font-size:clamp(3rem,7vw,5.5rem);color:white;line-height:1.05;margin-bottom:1.25rem;animation:fadeInUp 0.8s 0.2s ease both}
+@keyframes fadeInUp{from{opacity:0;transform:translateY(25px)}to{opacity:1;transform:translateY(0)}}
+.hero h1 em{color:var(--gram-pink-mid);font-style:italic;position:relative}
+.hero h1 em::after{content:'';position:absolute;bottom:-4px;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gram-pink-mid),transparent);border-radius:2px}
+.hero-sub{font-size:1.1rem;color:rgba(255,255,255,0.75);line-height:1.8;max-width:600px;margin:0 auto 2.5rem;animation:fadeInUp 0.8s 0.35s ease both}
+
+/* HERO STATS */
+.hero-stats{display:flex;gap:2.5rem;justify-content:center;flex-wrap:wrap;margin-bottom:3rem;padding-bottom:2.5rem;border-bottom:1px solid rgba(255,255,255,0.12);animation:fadeInUp 0.8s 0.45s ease both}
+.hero-stat{text-align:center}
+.hero-stat-num{font-family:'DM Serif Display',serif;font-size:2.2rem;color:white;display:block;line-height:1}
+.hero-stat-lbl{font-size:0.7rem;color:rgba(255,255,255,0.55);text-transform:uppercase;letter-spacing:0.07em;font-weight:600;margin-top:5px;display:block}
+
+/* HERO ACTIONS */
+.hero-actions{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;animation:fadeInUp 0.8s 0.55s ease both;margin-bottom:1.5rem}
+.btn-hero-primary{display:inline-flex;align-items:center;gap:8px;background:white;color:var(--gram-violet);padding:14px 30px;border-radius:999px;font-size:0.95rem;font-weight:700;text-decoration:none;transition:all 0.25s;box-shadow:0 4px 20px rgba(0,0,0,0.2);font-family:'DM Sans',sans-serif}
+.btn-hero-primary:hover{transform:translateY(-3px);box-shadow:0 8px 30px rgba(0,0,0,0.25)}
+.btn-hero-ghost{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.12);border:1.5px solid rgba(255,255,255,0.3);color:white;padding:14px 30px;border-radius:999px;font-size:0.95rem;font-weight:600;text-decoration:none;transition:all 0.25s;backdrop-filter:blur(8px);font-family:'DM Sans',sans-serif}
+.btn-hero-ghost:hover{background:rgba(255,255,255,0.22);transform:translateY(-3px)}
+
+/* Floating cards in hero */
+.hero-float-cards{display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap;animation:fadeInUp 0.8s 0.65s ease both}
+.hfc{background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);border-radius:var(--radius-md);padding:10px 16px;font-size:0.78rem;font-weight:600;color:white;display:inline-flex;align-items:center;gap:8px;backdrop-filter:blur(8px);animation:floatCard 4s ease-in-out infinite}
+.hfc:nth-child(2){animation-delay:1s}
+.hfc:nth-child(3){animation-delay:2s}
+@keyframes floatCard{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+
+/* SCROLL INDICATOR */
+.scroll-hint{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;color:rgba(255,255,255,0.35);font-size:0.7rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;animation:scrollBounce 2s ease-in-out infinite}
+@keyframes scrollBounce{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(8px)}}
+.scroll-line{width:1px;height:40px;background:linear-gradient(to bottom,rgba(255,255,255,0.4),transparent)}
+
+/* ── STATS BAND ── */
+.stats-band{background:linear-gradient(135deg,var(--gram-violet-deep),var(--gram-violet));padding:4.5rem 2.5rem;position:relative;overflow:hidden}
+.stats-band::before{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,0.05) 1px,transparent 1px);background-size:30px 30px}
+.stats-band-inner{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;text-align:center;position:relative;z-index:1}
+.band-stat{position:relative}
+.band-stat::after{content:'';position:absolute;right:0;top:20%;height:60%;width:1px;background:rgba(255,255,255,0.12)}
+.band-stat:last-child::after{display:none}
+.band-stat-num{font-family:'DM Serif Display',serif;font-size:2.8rem;color:white;display:block;line-height:1;margin-bottom:6px}
+.band-stat-lbl{font-size:0.72rem;color:rgba(255,255,255,0.6);text-transform:uppercase;letter-spacing:0.07em;font-weight:600}
+
+/* ── SHARED SECTION ── */
+.container{max-width:1120px;margin:0 auto;padding:0 2.5rem}
+.section{padding:6rem 0}
+.divider{height:1px;background:var(--border);max-width:1120px;margin:0 auto}
+.section-eyebrow{font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--gram-violet);margin-bottom:0.75rem;display:flex;align-items:center;gap:8px}
+.section-eyebrow::before{content:'';display:block;width:20px;height:2px;background:linear-gradient(90deg,var(--gram-violet),var(--gram-pink));border-radius:1px}
+.section-title{font-family:'DM Serif Display',serif;font-size:clamp(2rem,4vw,2.8rem);color:var(--ink);margin-bottom:1rem}
+.section-sub{font-size:1rem;color:var(--muted);line-height:1.75;max-width:560px;margin-bottom:3rem}
+
+/* ── HOW IT WORKS ── */
+.steps-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0;position:relative}
+.steps-grid::before{content:'';position:absolute;top:28px;left:10%;right:10%;height:2px;background:linear-gradient(90deg,var(--gram-violet-pale),var(--gram-violet-mid),var(--gram-pink-mid),var(--gram-violet-pale));z-index:0}
+.step-card{text-align:center;padding:0 1.5rem;position:relative;z-index:1}
+.step-num{width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--gram-violet),var(--gram-pink));color:white;font-family:'DM Serif Display',serif;font-size:1.5rem;display:flex;align-items:center;justify-content:center;margin:0 auto 1.25rem;box-shadow:0 0 0 8px var(--gram-violet-pale)}
+.step-card h4{font-family:'DM Serif Display',serif;font-size:1.1rem;color:var(--ink);margin-bottom:0.5rem}
+.step-card p{font-size:0.85rem;color:var(--muted);line-height:1.65}
+
+/* ── FEATURES ── */
+.features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.5rem}
+.feature-card{background:var(--white);border-radius:var(--radius-lg);padding:2rem 1.75rem;border:1px solid var(--border);box-shadow:var(--shadow-sm);transition:transform 0.22s,box-shadow 0.22s;position:relative;overflow:hidden}
+.feature-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,var(--gram-violet-pale),transparent);opacity:0;transition:opacity 0.3s}
+.feature-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg);border-color:rgba(107,33,168,0.25)}
+.feature-card:hover::before{opacity:0.6}
+.feature-icon{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:1.25rem;position:relative;z-index:1;transition:transform 0.2s}
+.feature-card:hover .feature-icon{transform:scale(1.1) rotate(5deg)}
+.feature-card h3{font-family:'DM Serif Display',serif;font-size:1.25rem;color:var(--ink);margin-bottom:0.6rem;position:relative;z-index:1}
+.feature-card p{font-size:0.9rem;color:var(--muted);line-height:1.7;position:relative;z-index:1}
+
+/* ── BADGE / TAG ── */
+.badge{display:inline-flex;align-items:center;gap:7px;background:var(--gram-violet-pale);color:var(--gram-violet);border:1px solid rgba(107,33,168,0.2);border-radius:999px;padding:6px 16px;font-size:0.72rem;font-weight:700;letter-spacing:0.07em;text-transform:uppercase}
+.badge-dot{width:7px;height:7px;border-radius:50%;background:var(--gram-violet-light);animation:pulse 2.2s infinite}
+.tag{background:var(--gram-violet-pale);color:var(--gram-violet);font-size:0.7rem;font-weight:600;padding:3px 10px;border-radius:999px}
+.tag-green{background:var(--green-bg);color:var(--green-text);border:1px solid var(--green-bdr);font-size:0.7rem;font-weight:700;padding:3px 10px;border-radius:999px}
+
+/* ── SEMESTERS ── */
+.sem-grid{display:grid;gap:1rem;margin-bottom:2.5rem}
+.sem-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius-md);padding:1.5rem 1rem;text-align:center;cursor:pointer;transition:all 0.25s;position:relative;overflow:visible}
+.sem-card:hover{border-color:var(--gram-violet-mid);background:var(--gram-violet-pale);transform:translateY(-4px);box-shadow:var(--shadow-md)}
+.sem-card.active{border-color:var(--gram-violet);background:var(--gram-violet-pale);box-shadow:0 0 0 3px rgba(107,33,168,0.15)}
+.sem-num{font-family:'DM Serif Display',serif;font-size:2.4rem;background:linear-gradient(135deg,var(--gram-violet),var(--gram-pink));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:block;line-height:1;margin-bottom:4px}
+.sem-lbl{font-size:0.68rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:0.05em}
+.sem-subjects{font-size:0.7rem;color:var(--gram-violet);margin-top:6px;font-weight:500}
+.new-badge{position:absolute;top:-8px;right:-8px;background:linear-gradient(135deg,var(--gram-violet),var(--gram-pink));color:white;font-size:0.55rem;font-weight:700;padding:3px 7px;border-radius:999px;letter-spacing:0.05em;text-transform:uppercase}
+.sem-panel{background:var(--white);border-radius:var(--radius-lg);border:1px solid var(--border);padding:2rem 2.5rem;display:none;box-shadow:var(--shadow-sm)}
+.sem-panel.visible{display:block;animation:fadeInUp 0.35s ease}
+.sem-panel-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:1.5rem;padding-bottom:1.25rem;border-bottom:1px solid var(--border)}
+.sem-panel-title{font-family:'DM Serif Display',serif;font-size:1.4rem;color:var(--ink)}
+.resource-list{display:flex;flex-direction:column;gap:0.6rem}
+
+/* ── SUBJECT CARDS ── */
+.subject-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius-md);overflow:hidden;transition:box-shadow 0.2s,transform 0.2s}
+.subject-card:hover{box-shadow:var(--shadow-md);transform:translateY(-1px)}
+.subject-header{display:flex;align-items:center;justify-content:space-between;padding:1rem 1.25rem;cursor:pointer;transition:background 0.2s;user-select:none}
+.subject-header:hover{background:var(--gram-violet-pale)}
+.subject-header.open{background:var(--gram-violet-pale);border-bottom:1px solid var(--border)}
+.subject-left{display:flex;align-items:center;gap:12px}
+.subject-icon{font-size:20px;flex-shrink:0}
+.subject-name{font-size:0.92rem;font-weight:600;color:var(--ink);display:block}
+.subject-desc{font-size:0.73rem;color:var(--muted);margin-top:1px}
+.subject-chevron{font-size:0.75rem;color:var(--muted);transition:transform 0.25s;flex-shrink:0;margin-left:8px}
+.subject-header.open .subject-chevron{transform:rotate(180deg)}
+.subject-links{display:none;padding:0.75rem 1rem 0.85rem;background:var(--surface)}
+.subject-links.open{display:block;animation:fadeInUp 0.2s ease}
+.sublink-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(175px,1fr));gap:0.5rem}
+
+/* ── SUBLINKS ── */
+.sublink{display:flex;align-items:center;gap:8px;padding:9px 13px;border-radius:var(--radius-sm);font-size:0.8rem;font-weight:500;text-decoration:none;transition:all 0.18s;border:1px solid transparent}
+.sublink-icon{font-size:14px;flex-shrink:0;transition:transform 0.2s}
+.sublink:hover .sublink-icon{transform:scale(1.2)}
+.sublink-mcq{background:var(--amber-light);color:var(--amber);border-color:rgba(186,117,23,0.2)}
+.sublink-mcq:hover{background:#F5D49A;border-color:var(--amber-mid);transform:translateY(-1px);box-shadow:0 3px 10px rgba(186,117,23,0.15)}
+.sublink-notes{background:var(--gram-violet-pale);color:var(--gram-violet);border-color:var(--border)}
+.sublink-notes:hover{background:var(--gram-violet-soft);border-color:var(--gram-violet-mid);transform:translateY(-1px);box-shadow:0 3px 10px rgba(107,33,168,0.12)}
+.sublink-practical{background:var(--green-bg);color:var(--green-text);border-color:rgba(59,109,17,0.15)}
+.sublink-practical:hover{background:#CFECAD;border-color:var(--green-bdr);transform:translateY(-1px);box-shadow:0 3px 10px rgba(59,109,17,0.12)}
+.sublink-viva{background:var(--gram-pink-pale);color:var(--gram-pink);border-color:rgba(190,24,93,0.15)}
+.sublink-viva:hover{background:#FBD1E7;border-color:var(--gram-pink-light);transform:translateY(-1px);box-shadow:0 3px 10px rgba(190,24,93,0.12)}
+.sublink-books{background:var(--book-bg);color:var(--book-text);border-color:var(--book-bdr);animation:bookShimmer 3s ease-in-out infinite}
+@keyframes bookShimmer{0%,100%{box-shadow:0 0 0 0 rgba(75,69,178,0)}50%{box-shadow:0 0 8px 2px rgba(75,69,178,0.18)}}
+.sublink-books:hover{background:#DDD9FB;border-color:#6C63E8;transform:translateY(-1px);box-shadow:0 4px 14px rgba(75,69,178,0.2);animation:none}
+.sublink-books .sublink-icon{animation:bookBounce 2s ease-in-out infinite}
+@keyframes bookBounce{0%,100%{transform:rotate(0deg) scale(1)}25%{transform:rotate(-8deg) scale(1.1)}75%{transform:rotate(8deg) scale(1.1)}}
+.sublink-books:hover .sublink-icon{animation:none;transform:scale(1.25)}
+.sublink-soon{background:var(--surface);color:var(--muted);border-color:var(--border);cursor:default;opacity:0.65}
+
+/* ── MENTORSHIP ── */
+.mentorship-wrap{display:grid;grid-template-columns:360px 1fr;gap:2.5rem;align-items:start}
+.mentor-profile{background:var(--white);border-radius:var(--radius-xl);padding:2rem;border:1px solid var(--border);box-shadow:var(--shadow-sm);position:sticky;top:84px}
+.mentor-avatar{width:76px;height:76px;border-radius:50%;background:linear-gradient(135deg,var(--gram-violet-pale),var(--gram-pink-pale));border:3px solid var(--gram-violet-mid);display:flex;align-items:center;justify-content:center;font-family:'DM Serif Display',serif;font-size:2rem;color:var(--gram-violet);margin-bottom:1rem}
+.mentor-name{font-family:'DM Serif Display',serif;font-size:1.35rem;color:var(--ink);margin-bottom:3px}
+.mentor-role{font-size:0.82rem;color:var(--gram-violet);font-weight:600;margin-bottom:0.85rem}
+.mentor-tags{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:1.25rem}
+.mentor-bio{font-size:0.875rem;color:var(--muted);line-height:1.7;margin-bottom:1.5rem}
+.session-list{display:flex;flex-direction:column;gap:0.6rem}
+.session-item{display:flex;align-items:flex-start;gap:10px;padding:0.85rem 1rem;background:var(--gram-violet-pale);border-radius:var(--radius-sm);border:1px solid rgba(107,33,168,0.1);transition:all 0.2s}
+.session-item:hover{background:var(--gram-violet-soft);transform:translateX(3px)}
+.session-icon{font-size:18px;flex-shrink:0;margin-top:1px}
+.session-item strong{display:block;font-size:0.85rem;color:var(--ink);font-weight:600;margin-bottom:1px}
+.session-item span{font-size:0.75rem;color:var(--muted)}
+.contact-card{background:var(--white);border-radius:var(--radius-xl);border:1px solid var(--border);box-shadow:var(--shadow-sm);padding:2rem}
+.contact-card-header h3{font-family:'DM Serif Display',serif;font-size:1.5rem;color:var(--ink);margin-bottom:0.4rem}
+.contact-card-header p{font-size:0.875rem;color:var(--muted)}
+.contact-options{display:flex;flex-direction:column;gap:0.75rem;margin-top:1.5rem}
+.contact-option{display:flex;align-items:center;gap:14px;padding:1rem 1.25rem;border-radius:var(--radius-md);border:1px solid var(--border);background:var(--surface);text-decoration:none;color:var(--ink);transition:all 0.22s}
+.contact-option:hover{transform:translateX(4px);box-shadow:var(--shadow-md);border-color:var(--gram-violet-mid);background:var(--gram-violet-pale)}
+.contact-icon{font-size:26px;flex-shrink:0}
+.contact-text{flex:1}
+.contact-text strong{display:block;font-size:0.92rem;color:var(--ink);font-weight:600;margin-bottom:2px}
+.contact-text span{font-size:0.78rem;color:var(--muted)}
+.contact-arrow{font-size:1.1rem;color:var(--muted);transition:transform 0.22s,color 0.22s;flex-shrink:0}
+.contact-option:hover .contact-arrow{transform:translateX(4px);color:var(--gram-violet)}
+
+
+
+/* ── WHY CARDS ── */
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem}
+.why-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius-lg);padding:2rem;transition:all 0.25s;box-shadow:var(--shadow-sm);position:relative;overflow:hidden}
+.why-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,var(--gram-violet-pale),transparent);opacity:0;transition:opacity 0.3s}
+.why-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg);border-color:rgba(107,33,168,0.25)}
+.why-card:hover::before{opacity:0.5}
+.why-icon{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:1.25rem;position:relative;z-index:1;transition:transform 0.2s}
+.why-card:hover .why-icon{transform:scale(1.1) rotate(5deg)}
+.why-card h3{font-family:'DM Serif Display',serif;font-size:1.2rem;color:var(--ink);margin-bottom:0.5rem;position:relative;z-index:1}
+.why-card p{font-size:0.88rem;color:var(--muted);line-height:1.7;position:relative;z-index:1}
+
+/* ── FOOTER ── */
+footer{background:var(--ink);color:rgba(255,255,255,0.55);padding:4rem 2.5rem 2.5rem}
+.footer-inner{max-width:1120px;margin:0 auto}
+.footer-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem;padding-bottom:3rem;border-bottom:1px solid rgba(255,255,255,0.08)}
+.footer-logo{font-family:'DM Serif Display',serif;font-size:1.4rem;color:var(--gram-violet-mid);display:flex;align-items:center;gap:8px;margin-bottom:0.75rem}
+.footer-logo-icon{width:34px;height:34px;background:linear-gradient(135deg,var(--gram-violet),var(--gram-pink));border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px}
+.footer-desc{font-size:0.875rem;line-height:1.7;color:rgba(255,255,255,0.4);max-width:260px}
+.footer-col h5{font-size:0.75rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-bottom:1rem}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:0.6rem}
+.footer-col a{text-decoration:none;font-size:0.875rem;color:rgba(255,255,255,0.4);transition:color 0.2s}
+.footer-col a:hover{color:var(--gram-violet-mid)}
+.footer-bottom{display:flex;align-items:center;justify-content:space-between;font-size:0.78rem;color:rgba(255,255,255,0.22);flex-wrap:wrap;gap:1rem}
+
+/* ── TOAST ── */
+.toast{position:fixed;bottom:2rem;right:2rem;background:linear-gradient(135deg,var(--gram-violet),var(--gram-pink));color:white;padding:14px 22px;border-radius:12px;font-size:0.9rem;font-weight:500;box-shadow:var(--shadow-lg);transform:translateY(80px);opacity:0;transition:all 0.4s cubic-bezier(0.34,1.56,0.64,1);z-index:999;display:flex;align-items:center;gap:10px}
+.toast.show{transform:translateY(0);opacity:1}
+
+/* ── SCROLL REVEAL ── */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity 0.7s ease,transform 0.7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-delay-1{transition-delay:0.1s}
+.reveal-delay-2{transition-delay:0.2s}
+.reveal-delay-3{transition-delay:0.3s}
+
+/* ── BACK TO SEMESTER SAVIOURS ── */
+.back-banner{background:linear-gradient(135deg,var(--gram-violet-pale),var(--gram-pink-pale));border-bottom:1px solid rgba(107,33,168,0.12);padding:8px 2.5rem;display:flex;align-items:center;gap:8px;font-size:0.78rem;color:var(--gram-violet);font-weight:500}
+.back-banner a{color:var(--gram-violet);text-decoration:none;font-weight:700;display:inline-flex;align-items:center;gap:4px}
+.back-banner a:hover{color:var(--gram-pink)}
+.back-dot{color:var(--muted)}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1100px){.mentorship-wrap{grid-template-columns:1fr}.mentor-profile{position:static}.footer-top{grid-template-columns:1fr 1fr;gap:2rem}}
+@media(max-width:900px){.sem-grid{grid-template-columns:repeat(2,1fr)!important}.steps-grid{grid-template-columns:repeat(2,1fr);gap:2rem}.steps-grid::before{display:none}.features-grid{grid-template-columns:repeat(2,1fr)}.sublink-grid{grid-template-columns:repeat(2,1fr)}.stats-band-inner{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:768px){nav{padding:0 1.25rem}.container{padding:0 1.5rem}.section{padding:3.5rem 0}.hero{padding:4rem 1.5rem 3rem;min-height:auto}.sem-grid{grid-template-columns:repeat(2,1fr)!important;gap:0.75rem}.sem-card{padding:1.2rem 0.75rem}.sem-num{font-size:2rem}.sem-panel{padding:1.5rem}.subject-header{padding:0.9rem 1rem}.subject-name{font-size:0.88rem}.sublink-grid{grid-template-columns:repeat(2,1fr);gap:0.4rem}.sublink{font-size:0.76rem;padding:8px 10px}.footer-top{grid-template-columns:1fr 1fr;gap:1.5rem}.mentorship-wrap{gap:1.5rem}.steps-grid{grid-template-columns:1fr 1fr}.features-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){nav{padding:0 1rem;height:56px}.logo{font-size:1.25rem}.logo-icon{width:30px;height:30px;font-size:15px}.nav-links{display:none}.nav-links.open{display:flex;flex-direction:column;position:fixed;inset:56px 0 0 0;background:rgba(250,248,255,0.98);backdrop-filter:blur(16px);padding:2rem 1.5rem;gap:1.25rem;z-index:199;overflow-y:auto}.nav-links.open a{font-size:1rem;padding:0.5rem 0;border-bottom:1px solid var(--border)}.nav-toggle{display:block}.hero{padding:3rem 1rem 2.5rem;min-height:auto}.hero h1{font-size:clamp(1.75rem,8vw,2.5rem)}.hero-sub{font-size:0.95rem}.hero-actions{flex-direction:column;gap:0.75rem}.hero-actions a{width:100%;justify-content:center}.hero-stats{gap:1.25rem}.container{padding:0 1rem}.section{padding:3rem 0}.section-title{font-size:clamp(1.5rem,6vw,2rem)}.section-sub{font-size:0.9rem;margin-bottom:2rem}.features-grid{grid-template-columns:1fr;gap:1rem}.feature-card{padding:1.5rem}.steps-grid{grid-template-columns:1fr;gap:1.5rem}.step-card{padding:0 0.5rem}.sem-grid{grid-template-columns:repeat(2,1fr)!important;gap:0.6rem}.sem-card{padding:1rem 0.5rem}.sem-num{font-size:1.8rem}.sem-lbl{font-size:0.6rem}.sem-subjects{font-size:0.62rem}.new-badge{font-size:0.48rem;padding:2px 6px;top:-6px;right:-6px}.sem-panel{padding:1rem}.sem-panel-header{flex-direction:column;align-items:flex-start;gap:0.5rem}.sem-panel-title{font-size:1.15rem}.subject-header{padding:0.85rem 0.9rem}.subject-icon{font-size:17px}.subject-name{font-size:0.84rem}.subject-desc{font-size:0.68rem}.subject-links{padding:0.6rem 0.75rem 0.75rem}.sublink-grid{grid-template-columns:1fr;gap:0.4rem}.sublink{font-size:0.78rem;padding:9px 12px}.sublink-icon{font-size:13px}.mentorship-wrap{grid-template-columns:1fr;gap:1.25rem}.mentor-profile{padding:1.5rem}.mentor-avatar{width:60px;height:60px;font-size:1.6rem}.mentor-name{font-size:1.15rem}.footer-top{grid-template-columns:1fr;gap:1.75rem}.footer{padding:3rem 1.25rem 2rem}.footer-bottom{flex-direction:column;gap:0.5rem;text-align:center}.toast{bottom:1rem;right:1rem;left:1rem;font-size:0.85rem;padding:12px 16px}.stats-band{padding:3rem 1.25rem}.stats-band-inner{grid-template-columns:repeat(2,1fr);gap:1.5rem}.band-stat::after{display:none}.hero-float-cards{gap:0.5rem}.hfc{font-size:0.7rem;padding:8px 12px}}
+@media(max-width:400px){.hero h1{font-size:1.65rem}.sem-grid{grid-template-columns:repeat(2,1fr)!important}.sublink-grid{grid-template-columns:1fr}.hero-stats{gap:1rem}}
+@media(hover:none) and (pointer:coarse){.sublink:hover{transform:none}.feature-card:hover{transform:none}.sem-card:hover{transform:none}.btn-hero-primary:hover,.btn-hero-ghost:hover{transform:none}.sublink{padding:11px 13px}.subject-header{padding:1.1rem 1.25rem}}
+</style>
+</head>
+<body>
+
+<div class="cursor-glow" id="cursorGlow"></div>
+<div class="toast" id="toast">✅ Opening resource...</div>
+
+<!-- BACK TO SEMESTER SAVIOURS -->
+<div class="back-banner">
+  <span>🎓</span>
+  <a href="../index.html">← Back to Semester Saviours</a>
+  <span class="back-dot">·</span>
+  <span>Medical Laboratory Technology Department</span>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="logo">
+    <div class="logo-icon">🦠</div>
+    <div class="logo-text-wrap">
+      MLT
+      <span class="logo-sub">Medical Laboratory Technology</span>
+    </div>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#how">How it works</a></li>
+    <li><a href="#semesters">Resources</a></li>
+    <li><a href="#mentorship">Mentorship</a></li>
+    <li><a href="#mentorship" class="btn-nav">✉️ Contact Us</a></li>
+  </ul>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-orb orb-1"></div>
+  <div class="hero-orb orb-2"></div>
+  <div class="hero-orb orb-3"></div>
+  <div class="hero-orb orb-4"></div>
+  <div class="hero-grid-overlay"></div>
+  <div class="hero-particles" id="heroParticles"></div>
+  <div class="stain-slide" id="stainSlide"></div>
+
+  <div class="hero-inner">
+    <div class="hero-eyebrow">
+      <span class="hero-eyebrow-dot"></span>
+      Free MLT Education · Pakistan · UHS Aligned
+    </div>
+    <h1>Your lab career starts<br>with the <em>right notes.</em></h1>
+    <p class="hero-sub">A free Medical Laboratory Technology (MLT) study hub built by an MLT student, for MLT students. Access semester-wise notes, MCQ banks, practical books, viva prep — and 1-on-1 guidance, all free.</p>
+
+    <div class="hero-stats">
+      <div class="hero-stat"><span class="hero-stat-num">400+</span><span class="hero-stat-lbl">MCQs Live</span></div>
+      <div class="hero-stat"><span class="hero-stat-num">4</span><span class="hero-stat-lbl">Semesters</span></div>
+      <div class="hero-stat"><span class="hero-stat-num">100%</span><span class="hero-stat-lbl">Free Forever</span></div>
+      <div class="hero-stat"><span class="hero-stat-num">1:1</span><span class="hero-stat-lbl">Guidance</span></div>
+      <div class="hero-stat"><span class="hero-stat-num">UHS</span><span class="hero-stat-lbl">Aligned</span></div>
+    </div>
+
+    <div class="hero-actions">
+      <a href="#semesters" class="btn-hero-primary">📂 Browse Resources</a>
+      <a href="#mentorship" class="btn-hero-ghost">✉️ Contact Us</a>
+    </div>
+
+    <div class="hero-float-cards">
+      <div class="hfc">🔬 400 MCQs live now</div>
+      <div class="hfc">✅ Sem 3 &amp; 4 fully live</div>
+      <div class="hfc">🩸 Gram Stain. Crystal Violet. Safranin.</div>
+    </div>
+  </div>
+
+  <div class="scroll-hint">
+    <span>scroll to explore</span>
+    <div class="scroll-line"></div>
+  </div>
+</div>
+
+<!-- STATS BAND -->
+<div class="stats-band">
+  <div class="stats-band-inner">
+    <div class="band-stat reveal"><span class="band-stat-num">400+</span><span class="band-stat-lbl">MCQs Live</span></div>
+    <div class="band-stat reveal reveal-delay-1"><span class="band-stat-num">8+</span><span class="band-stat-lbl">Subjects Covered</span></div>
+    <div class="band-stat reveal reveal-delay-2"><span class="band-stat-num">PKR 0</span><span class="band-stat-lbl">Cost to Students</span></div>
+    <div class="band-stat reveal reveal-delay-3"><span class="band-stat-num">∞</span><span class="band-stat-lbl">Knowledge</span></div>
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<section id="how" class="section">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:3.5rem;">
+      <div class="section-eyebrow reveal" style="justify-content:center">Simple process</div>
+      <div class="section-title reveal">Four steps to study smarter</div>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card reveal"><div class="step-num">1</div><h4>Pick your semester</h4><p>Browse 4 semesters of B.Sc. MLT and find exactly what you need.</p></div>
+      <div class="step-card reveal reveal-delay-1"><div class="step-num">2</div><h4>Download for free</h4><p>Click any resource to open instantly — no login, no paywall, no catch.</p></div>
+      <div class="step-card reveal reveal-delay-2"><div class="step-num">3</div><h4>Need help? Book a session</h4><p>Fill the form and Faizan will personally reach out to schedule a 1:1 session.</p></div>
+      <div class="step-card reveal reveal-delay-3"><div class="step-num">4</div><h4>Support the platform</h4><p>If it helped you, support Semester Saviours on the main site — even Rs. 50 keeps new content coming.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- WHAT YOU GET -->
+<section class="section">
+  <div class="container">
+    <div class="section-eyebrow reveal">What you get</div>
+    <div class="section-title reveal">Everything an MLT student needs</div>
+    <p class="section-sub reveal">Curated, exam-ready content built from real UHS MLT coursework — not copy-pasted, actually studied material.</p>
+    <div class="why-grid">
+      <div class="why-card reveal"><div class="why-icon" style="background:var(--gram-violet-pale);">🔬</div><h3>Practical Books</h3><p>Step-by-step guides for hematology, microbiology, histopathology &amp; clinical chemistry — with staining procedures.</p></div>
+      <div class="why-card reveal reveal-delay-1"><div class="why-icon" style="background:var(--amber-light);">📝</div><h3>MCQ Banks</h3><p>Topic-wise MCQ banks with explanations. Solve them directly on the site — timed exam or practice mode.</p></div>
+      <div class="why-card reveal reveal-delay-2"><div class="why-icon" style="background:var(--gram-violet-soft);">📊</div><h3>Semester Notes</h3><p>Organized, semester-wise notes for every core MLT subject — formatted for reading and quick revision.</p></div>
+      <div class="why-card reveal"><div class="why-icon" style="background:var(--gram-pink-pale);">🎯</div><h3>Viva Prep Guides</h3><p>Commonly asked viva questions from real UHS clinical rotations, with concise model answers ready to memorize.</p></div>
+      <div class="why-card reveal reveal-delay-1" style="border-color:var(--book-bdr)"><div class="why-icon" style="background:var(--book-bg);">📚</div><h3 style="color:var(--book-text)">Recommended Books</h3><p>Curated reading lists for every subject — the exact textbooks that actually help MLT students at UHS-affiliated colleges.</p></div>
+      <div class="why-card reveal reveal-delay-2"><div class="why-icon" style="background:var(--green-bg);">🤝</div><h3>1-on-1 Guidance</h3><p>Book a free personal session with Faizan — a senior who has been through the same rotations, exams, and vivas.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- SEMESTERS -->
+<section id="semesters" class="section">
+  <div class="container">
+    <div class="section-eyebrow reveal">Browse by semester</div>
+    <div class="section-title reveal">Pick your semester</div>
+    <p class="section-sub reveal">4 semesters of B.Sc. MLT covered. Click a semester to see available resources — all free.</p>
+    <div class="sem-grid reveal" style="grid-template-columns:repeat(4,1fr);">
+      <div class="sem-card" onclick="showSem(1,this)"><span class="sem-num">1</span><div class="sem-lbl">Semester</div><div class="sem-subjects">Coming Soon</div></div>
+      <div class="sem-card" onclick="showSem(2,this)"><span class="sem-num">2</span><div class="sem-lbl">Semester</div><div class="sem-subjects">Coming Soon</div></div>
+      <div class="sem-card" onclick="showSem(3,this)"><div class="new-badge">LIVE</div><span class="sem-num">3</span><div class="sem-lbl">Semester</div><div class="sem-subjects">HM-I · HP-I · GPA · ICT</div></div>
+      <div class="sem-card" onclick="showSem(4,this)"><div class="new-badge">LIVE</div><span class="sem-num">4</span><div class="sem-lbl">Semester</div><div class="sem-subjects">HM-II · HP-II · Mic-I · BMB</div></div>
+    </div>
+
+    <div class="sem-panel" id="panel-1">
+      <div class="sem-panel-header"><div class="sem-panel-title">Semester 1 — Coming Soon</div></div>
+      <p style="color:var(--muted);font-size:0.9rem;">Resources are being prepared. Book a session with Faizan for guidance in the meantime.</p>
+    </div>
+    <div class="sem-panel" id="panel-2">
+      <div class="sem-panel-header"><div class="sem-panel-title">Semester 2 — Coming Soon</div></div>
+      <p style="color:var(--muted);font-size:0.9rem;">Resources are being prepared. Book a session for guidance in the meantime.</p>
+    </div>
+
+    <!-- SEMESTER 3 -->
+    <div class="sem-panel" id="panel-3">
+      <div class="sem-panel-header">
+        <div><div class="sem-panel-title">Semester 3 Resources</div><p style="font-size:0.85rem;color:var(--muted);margin-top:4px;">21 Credit Hours · UHS B.Sc. MLT</p></div>
+        <span class="tag-green">All Free</span>
+      </div>
+      <div class="resource-list">
+
+        <div class="subject-card">
+          <div class="subject-header" onclick="toggleSubject(this)">
+            <div class="subject-left"><span class="subject-icon">🧬</span><div><span class="subject-name">HM-I — Hematology-I</span><span class="subject-desc">Blood cells, disorders, staining techniques</span></div></div>
+            <span class="subject-chevron">▼</span>
+          </div>
+          <div class="subject-links"><div class="sublink-grid">
+            <a href="mcq hematology.html" target="_blank" class="sublink sublink-mcq"><span class="sublink-icon">📝</span> MCQ Bank</a>
+            <a href="YOUR_LINK_HM1_NOTES" target="_blank" class="sublink sublink-notes"><span class="sublink-icon">📖</span> Revision Notes</a>
+            <a href="YOUR_LINK_HM1_PRACTICAL" target="_blank" class="sublink sublink-practical"><span class="sublink-icon">🔬</span> Practical Book</a>
+            <a href="YOUR_LINK_HM1_VIVA" target="_blank" class="sublink sublink-viva"><span class="sublink-icon">🎯</span> Viva Prep</a>
+            <a href="YOUR_LINK_HM1_BOOKS" target="_blank" class="sublink sublink-books"><span class="sublink-icon">📚</span> Recommended Books</a>
+          </div></div>
+        </div>
+
+        <div class="subject-card">
+          <div class="subject-header" onclick="toggleSubject(this)">
+            <div class="subject-left"><span class="subject-icon">🔬</span><div><span class="subject-name">HP-I — Histopathology-I</span><span class="subject-desc">H&amp;E staining, tissue processing, histological techniques</span></div></div>
+            <span class="subject-chevron">▼</span>
+          </div>
+          <div class="subject-links"><div class="sublink-grid">
+            <a href="mcq histopathology.html" target="_blank" class="sublink sublink-mcq"><span class="sublink-icon">📝</span> MCQ Bank</a>
+            <a href="YOUR_LINK_HP1_NOTES" target="_blank" class="sublink sublink-notes"><span class="sublink-icon">📖</span> Revision Notes</a>
+            <a href="YOUR_LINK_HP1_PRACTICAL" target="_blank" class="sublink sublink-practical"><span class="sublink-icon">🔬</span> Practical Book</a>
+            <a href="YOUR_LINK_HP1_VIVA" target="_blank" class="sublink sublink-viva"><span class="sublink-icon">🎯</span> Viva Prep</a>
+            <a href="YOUR_LINK_HP1_BOOKS" target="_blank" class="sublink sublink-books"><span class="sublink-icon">📚</span> Recommended Books</a>
+          </div></div>
+        </div>
+
+        <div class="subject-card">
+          <div class="subject-header" onclick="toggleSubject(this)">
+            <div class="subject-left"><span class="subject-icon">🫀</span><div><span class="subject-name">GPA — General Pathology</span><span class="subject-desc">Inflammation, cell injury, neoplasia fundamentals</span></div></div>
+            <span class="subject-chevron">▼</span>
+          </div>
+          <div class="subject-links"><div class="sublink-grid">
+            <a href="mcq.html" target="_blank" class="sublink sublink-mcq"><span class="sublink-icon">📝</span> MCQ Bank (400 Qs)</a>
+            <a href="YOUR_LINK_GPA_NOTES" target="_blank" class="sublink sublink-notes"><span class="sublink-icon">📖</span> Revision Notes</a>
+            <span class="sublink sublink-soon"><span class="sublink-icon">🔬</span> Practical Book — Soon</span>
+            <a href="YOUR_LINK_GPA_VIVA" target="_blank" class="sublink sublink-viva"><span class="sublink-icon">🎯</span> Viva Prep</a>
+            <a href="YOUR_LINK_GPA_BOOKS" target="_blank" class="sublink sublink-books"><span class="sublink-icon">📚</span> Recommended Books</a>
+          </div></div>
+        </div>
+
+        <div class="subject-card">
+          <div class="subject-header" onclick="toggleSubject(this)">
+            <div class="subject-left"><span class="subject-icon">💻</span><div><span class="subject-name">GEICT — Applications of ICT</span><span class="subject-desc">Computer applications, digital tools in healthcare</span></div></div>
+            <span class="subject-chevron">▼</span>
+          </div>
+          <div class="subject-links"><div class="sublink-grid">
+            <span class="sublink sublink-soon"><span class="sublink-icon">📝</span> MCQ Bank — Soon</span>
+            <a href="YOUR_LINK_ICT_NOTES" target="_blank" class="sublink sublink-notes"><span class="sublink-icon">📖</span> Revision Notes</a>
+            <span class="sublink sublink-soon"><span class="sublink-icon">🔬</span> Practical — Soon</span>
+            <span class="sublink sublink-soon"><span class="sublink-icon">🎯</span> Viva Prep — Soon</span>
+          </div></div>
+        </div>
+
+        <div class="subject-card">
+          <div class="subject-header" onclick="toggleSubject(this)">
+            <div class="subject-left"><span class="subject-icon">🤝</span><div><span class="subject-name">GECCM — Civics &amp; Community Engagement</span><span class="subject-desc">Civic responsibility, community health service</span></div></div>
+            <span class="subject-chevron">▼</span>
+          </div>
+          <div class="subject-links"><div class="sublink-grid">
+            <span class="sublink sublink-soon"><span class="sublink-icon">📝</span> MCQ Bank — Soon</span>
+            <a href="YOUR_LINK_CCM_NOTES" target="_blank" class="sublink sublink-notes"><span class="sublink-icon">📖</span> Revision Notes</a>
+            <a href="YOUR_LINK_CCM_REFLECTIVE" target="_blank" class="sublink sublink-viva"><span class="sublink-icon">✍️</span> Reflective Writing Guide</a>
+            <a href="YOUR_LINK_CCM_BOOKS" target="_blank" class="sublink sublink-books"><span class="sublink-icon">📚</span> Recommended Books</a>
+          </div></div>
+        </div>
+
+        <div class="subject-card">
+          <div class="subject-header" onclick="toggleSubject(this)">
+            <div class="subject-left"><span class="subject-icon">💼</span><div><span class="subject-name">GEE — Entrepreneurship</span><span class="subject-desc">Business basics, startup thinking, case studies</span></div></div>
+            <span class="subject-chevron">▼</span>
+          </div>
+          <div class="subject-links"><div class="sublink-grid">
+            <span class="sublink sublink-soon"><span class="sublink-icon">📝</span> MCQ Bank — Soon</span>
+            <a href="YOUR_LINK_GEE_NOTES" target="_blank" class="sublink sublink-notes"><span class="sublink-icon">📖</span> Revision Notes</a>
+            <a href="YOUR_LINK_GEE_CASES" target="_blank" class="sublink sublink-practical"><span class="sublink-icon">📊</span> Case Studies</a>
+            <a href="YOUR_LINK_GEE_BOOKS" target="_blank" class="sublink sublink-books"><span class="sublink-icon">📚</span> Recommended Books</a>
+          </div></div>
+        </div>
+
+        <div class="subject-card">
+          <div class="subject-header" onclick="toggleSubject(this)">
+            <div class="subject-left"><span class="subject-icon">📝</span><div><span class="subject-name">EPC-1 — English Proficiency 1</span><span class="subject-desc">Essay writing, grammar, academic communication</span></div></div>
+            <span class="subject-chevron">▼</span>
+          </div>
+          <div class="subject-links"><div class="sublink-grid">
+            <a href="YOUR_LINK_EPC1_LISTENING" target="_blank" class="sublink sublink-notes"><span class="sublink-icon">👂</span> Listening Exercises</a>
+            <a href="YOUR_LINK_EPC1_WRITING" target="_blank" class="sublink sublink-practical"><span class="sublink-icon">✍️</span> Writing Practice</a>
+            <a href="YOUR_LINK_EPC1_READING" target="_blank" class="sublink sublink-viva"><span class="sublink-icon">📖</span> Reading Comprehension</a>
+            <a href="YOUR_LINK_EPC1_SPEAKING" target="_blank" class="sublink sublink-viva"><span class="sublink-icon">🗣️</span> Speaking Practice</a>
+          </div></div>
+        </div>
+
+        <div class="subject-card">
+          <div class="subject-header" onclick="toggleSubject(this)">
+            <div class="subject-left"><span class="subject-icon">📓</span><div><span class="subject-name">PERL-III — Reflective Learning</span><span class="subject-desc">Gibbs Reflective Cycle, journal entries, clinical placement</span></div></div>
+            <span class="subject-chevron">▼</span>
+          </div>
+          <div class="subject-links"><div class="sublink-grid">
+            <a href="YOUR_LINK_PERL3_TEMPLATE" target="_blank" class="sublink sublink-notes"><span class="sublink-icon">📖</span> Gibbs Cycle Templates</a>
+            <a href="YOUR_LINK_PERL3_SAMPLES" target="_blank" class="sublink sublink-practical"><span class="sublink-icon">📄</span> Sample Journal Entries</a>
+            <a href="YOUR_LINK_PERL3_GUIDE" target="_blank" class="sublink sublink-viva"><span class="sublink-icon">🎯</span> How-to Write a Portfolio</a>
+          </div></div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- SEMESTER 4 -->
+    <div class="sem-panel" id="panel-4">
+      <div class="sem-panel-header">
+        <div><div class="sem-panel-title">Semester 4 Resources</div><p style="font-size:0.85rem;color:var(--muted);margin-top:4px;">20 Credit Hours · UHS B.Sc. MLT</p></div>
+        <span class="tag-green">All Free</span>
+      </div>
+      <div class="resource-list">
+
+        <div class="subject-card">
+          <div class="subject-header" onclick="toggleSubject(this)">
+            <div class="subject-left"><span class="subject-icon">🧬</span><div><span class="subject-name">HM-II — Hematology-II</span><span class="subject-desc">Advanced disorders, leukemia, coagulation, cytochemistry</span></div></div>
+            <span class="subject-chevron">▼</span>
+          </div>
+          <div class="subject-links"><div class="sublink-grid">
+            <a href="YOUR_LINK_HM2_MCQ" target="_blank" class="sublink sublink-mcq"><span class="sublink-icon">📝</span> MCQ Bank</a>
+            <a href="YOUR_LINK_HM2_NOTES" target="_blank" class="sublink sublink-notes"><span class="sublink-icon">📖</span> Revision Notes</a>
+            <a href="YOUR_LINK_HM2_PRACTICAL" target="_blank" class="sublink sublink-practical"><span class="sublink-icon">🔬</span> Practical Book</a>
+            <a href="YOUR_LINK_HM2_VIVA" target="_blank" class="sublink sublink-viva"><span class="sublink-icon">🎯</span> Viva Prep</a>
+            <a href="YOUR_LINK_HM2_BOOKS" target="_blank" class="sublink sublink-books"><span class="sublink-icon">📚</span> Recommended Books</a>
+          </div></div>
+        </div>
+
+        <div class="subject-card">
+          <div class="subject-header" onclick="toggleSubject(this)">
+            <div class="subject-left"><span class="subject-icon">🔬</span><div><span class="subject-name">HP-II — Histopathology-II</span><span class="subject-desc">Special stains, advanced tissue techniques, pathological changes</span></div></div>
+            <span class="subject-chevron">▼</span>
+          </div>
+          <div class="subject-links"><div class="sublink-grid">
+            <a href="YOUR_LINK_HP2_MCQ" target="_blank" class="sublink sublink-mcq"><span class="sublink-icon">📝</span> MCQ Bank</a>
+            <a href="YOUR_LINK_HP2_NOTES" target="_blank" class="sublink sublink-notes"><span class="sublink-icon">📖</span> Revision Notes</a>
+            <a href="YOUR_LINK_HP2_PRACTICAL" target="_blank" class="sublink sublink-practical"><span class="sublink-icon">🔬</span> Practical Book</a>
+            <a href="YOUR_LINK_HP2_VIVA" target="_blank" class="sublink sublink-viva"><span class="sublink-icon">🎯</span> Viva Prep</a>
+            <a href="YOUR_LINK_HP2_BOOKS" target="_blank" class="sublink sublink-books"><span class="sublink-icon">📚</span> Recommended Books</a>
+          </div></div>
+        </div>
+
+        <div class="subject-card">
+          <div class="subject-header" onclick="toggleSubject(this)">
+            <div class="subject-left"><span class="subject-icon">🦠</span><div><span class="subject-name">Mic-I — Microbiology-I (Basic Bacteriology)</span><span class="subject-desc">Gram staining, culture media, sensitivity &amp; MIC testing</span></div></div>
+            <span class="subject-chevron">▼</span>
+          </div>
+          <div class="subject-links"><div class="sublink-grid">
+            <a href="YOUR_LINK_MIC1_MCQ" target="_blank" class="sublink sublink-mcq"><span class="sublink-icon">📝</span> MCQ Bank</a>
+            <a href="YOUR_LINK_MIC1_NOTES" target="_blank" class="sublink sublink-notes"><span class="sublink-icon">📖</span> Revision Notes</a>
+            <a href="YOUR_LINK_MIC1_PRACTICAL" target="_blank" class="sublink sublink-practical"><span class="sublink-icon">🔬</span> Practical Book</a>
+            <a href="YOUR_LINK_MIC1_VIVA" target="_blank" class="sublink sublink-viva"><span class="sublink-icon">🎯</span> Viva Prep</a>
+            <a href="YOUR_LINK_MIC1_BOOKS" target="_blank" class="sublink sublink-books"><span class="sublink-icon">📚</span> Recommended Books</a>
+          </div></div>
+        </div>
+
+        <div class="subject-card">
+          <div class="subject-header" onclick="toggleSubject(this)">
+            <div class="subject-left"><span class="subject-icon">⚗️</span><div><span class="subject-name">Chemical Pathology-I</span><span class="subject-desc">Clinical chemistry, ISEs, Nernst equation, automated analyzers</span></div></div>
+            <span class="subject-chevron">▼</span>
+          </div>
+          <div class="subject-links"><div class="sublink-grid">
+            <a href="YOUR_LINK_CP1_MCQ" target="_blank" class="sublink sublink-mcq"><span class="sublink-icon">📝</span> MCQ Bank</a>
+            <a href="YOUR_LINK_CP1_NOTES" target="_blank" class="sublink sublink-notes"><span class="sublink-icon">📖</span> Revision Notes</a>
+            <a href="YOUR_LINK_CP1_PRACTICAL" target="_blank" class="sublink sublink-practical"><span class="sublink-icon">🔬</span> Practical Book</a>
+            <a href="YOUR_LINK_CP1_VIVA" target="_blank" class="sublink sublink-viva"><span class="sublink-icon">🎯</span> Viva Prep</a>
+            <a href="YOUR_LINK_CP1_BOOKS" target="_blank" class="sublink sublink-books"><span class="sublink-icon">📚</span> Recommended Books</a>
+          </div></div>
+        </div>
+
+        <div class="subject-card">
+          <div class="subject-header" onclick="toggleSubject(this)">
+            <div class="subject-left"><span class="subject-icon">🧪</span><div><span class="subject-name">BMB — Basic Molecular Biology</span><span class="subject-desc">DNA structure, PCR, gel electrophoresis, molecular techniques</span></div></div>
+            <span class="subject-chevron">▼</span>
+          </div>
+          <div class="subject-links"><div class="sublink-grid">
+            <a href="YOUR_LINK_BMB_MCQ" target="_blank" class="sublink sublink-mcq"><span class="sublink-icon">📝</span> MCQ Bank</a>
+            <a href="YOUR_LINK_BMB_NOTES" target="_blank" class="sublink sublink-notes"><span class="sublink-icon">📖</span> Revision Notes</a>
+            <span class="sublink sublink-soon"><span class="sublink-icon">🔬</span> Practical Book — Soon</span>
+            <a href="YOUR_LINK_BMB_VIVA" target="_blank" class="sublink sublink-viva"><span class="sublink-icon">🎯</span> Viva Prep</a>
+            <a href="YOUR_LINK_BMB_BOOKS" target="_blank" class="sublink sublink-books"><span class="sublink-icon">📚</span> Recommended Books</a>
+          </div></div>
+        </div>
+
+        <div class="subject-card">
+          <div class="subject-header" onclick="toggleSubject(this)">
+            <div class="subject-left"><span class="subject-icon">🇵🇰</span><div><span class="subject-name">PS — Pakistan Studies</span><span class="subject-desc">History, geography, constitution, national development</span></div></div>
+            <span class="subject-chevron">▼</span>
+          </div>
+          <div class="subject-links"><div class="sublink-grid">
+            <a href="YOUR_LINK_PS_MCQ" target="_blank" class="sublink sublink-mcq"><span class="sublink-icon">📝</span> MCQ Bank</a>
+            <a href="YOUR_LINK_PS_NOTES" target="_blank" class="sublink sublink-notes"><span class="sublink-icon">📖</span> Revision Notes</a>
+            <a href="YOUR_LINK_PS_BOOKS" target="_blank" class="sublink sublink-books"><span class="sublink-icon">📚</span> Recommended Books</a>
+          </div></div>
+        </div>
+
+        <div class="subject-card">
+          <div class="subject-header" onclick="toggleSubject(this)">
+            <div class="subject-left"><span class="subject-icon">📝</span><div><span class="subject-name">EPC-2 — English Proficiency 2</span><span class="subject-desc">Academic writing, reading comprehension, research writing</span></div></div>
+            <span class="subject-chevron">▼</span>
+          </div>
+          <div class="subject-links"><div class="sublink-grid">
+            <a href="YOUR_LINK_EPC2_LISTENING" target="_blank" class="sublink sublink-notes"><span class="sublink-icon">👂</span> Listening Exercises</a>
+            <a href="YOUR_LINK_EPC2_WRITING" target="_blank" class="sublink sublink-practical"><span class="sublink-icon">✍️</span> Writing Practice</a>
+            <a href="YOUR_LINK_EPC2_READING" target="_blank" class="sublink sublink-viva"><span class="sublink-icon">📖</span> Reading Comprehension</a>
+            <a href="YOUR_LINK_EPC2_SPEAKING" target="_blank" class="sublink sublink-viva"><span class="sublink-icon">🗣️</span> Speaking Practice</a>
+          </div></div>
+        </div>
+
+        <div class="subject-card">
+          <div class="subject-header" onclick="toggleSubject(this)">
+            <div class="subject-left"><span class="subject-icon">📓</span><div><span class="subject-name">PERL-IV — Reflective Learning</span><span class="subject-desc">Gibbs Reflective Cycle, advanced clinical placement journal</span></div></div>
+            <span class="subject-chevron">▼</span>
+          </div>
+          <div class="subject-links"><div class="sublink-grid">
+            <a href="YOUR_LINK_PERL4_TEMPLATE" target="_blank" class="sublink sublink-notes"><span class="sublink-icon">📖</span> Gibbs Cycle Templates</a>
+            <a href="YOUR_LINK_PERL4_SAMPLES" target="_blank" class="sublink sublink-practical"><span class="sublink-icon">📄</span> Sample Journal Entries</a>
+            <a href="YOUR_LINK_PERL4_GUIDE" target="_blank" class="sublink sublink-viva"><span class="sublink-icon">🎯</span> How-to Write a Portfolio</a>
+          </div></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CONTACT -->
+<section id="mentorship" class="section">
+  <div class="container">
+    <div class="section-eyebrow reveal">Contact us</div>
+    <div class="section-title reveal">Get in touch with Faizan</div>
+    <p class="section-sub reveal">A batch leader and Aspire Leaders Program participant who has been through the UHS MLT grind. Direct, personal guidance — free.</p>
+    <div class="mentorship-wrap">
+      <div class="mentor-profile reveal">
+        <div class="mentor-avatar">FI</div>
+        <div class="mentor-name">Faizan Ishaq</div>
+        <div class="mentor-role">B.Sc. MLT · DGKMC, D.G. Khan · Batch Leader</div>
+        <div class="mentor-tags">
+          <span class="tag">Aspire Leaders Program</span>
+          <span class="tag">Student Welfare Foundation</span>
+        </div>
+        <p class="mentor-bio">Clinical rotations across hematology, microbiology, histopathology &amp; clinical chemistry. Passionate about elevating MLT professionals across Pakistan.</p>
+        <div class="session-list">
+          <div class="session-item"><span class="session-icon">🔬</span><div><strong>Practical &amp; Viva Prep</strong><span>Walk through lab techniques before your exam</span></div></div>
+          <div class="session-item"><span class="session-icon">📚</span><div><strong>Subject Deep Dives</strong><span>Break down a confusing topic together</span></div></div>
+          <div class="session-item"><span class="session-icon">📝</span><div><strong>PERL Portfolios</strong><span>Gibbs Reflective Cycle entries done right</span></div></div>
+        </div>
+      </div>
+      <div class="contact-card reveal reveal-delay-1">
+        <div class="contact-card-header">
+          <h3>Contact Us</h3>
+          <p>Reach out directly — Faizan personally replies to every message, usually within 24 hours.</p>
+        </div>
+        <div class="contact-options">
+          <a href="https://wa.me/923340291818" target="_blank" class="contact-option">
+            <span class="contact-icon">💬</span>
+            <div class="contact-text"><strong>WhatsApp</strong><span>0334-0291818 · fastest response</span></div>
+            <span class="contact-arrow">→</span>
+          </a>
+          <a href="mailto:m.faizan.buziness@gmail.com" class="contact-option">
+            <span class="contact-icon">✉️</span>
+            <div class="contact-text"><strong>Email</strong><span>m.faizan.buziness@gmail.com</span></div>
+            <span class="contact-arrow">→</span>
+          </a>
+          <a href="tel:03340291818" class="contact-option">
+            <span class="contact-icon">📞</span>
+            <div class="contact-text"><strong>Call</strong><span>0334-0291818</span></div>
+            <span class="contact-arrow">→</span>
+          </a>
+          <a href="https://sites.google.com/view/faizanishaqmlt/home" target="_blank" class="contact-option">
+            <span class="contact-icon">🌐</span>
+            <div class="contact-text"><strong>Portfolio</strong><span>See Faizan's background &amp; work</span></div>
+            <span class="contact-arrow">→</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo"><div class="footer-logo-icon">🦠</div>MLT</div>
+        <p class="footer-desc">Free high-quality study material for Medical Laboratory Technology (MLT) students across Pakistan. Built with care by a student who knows the struggle.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Resources</h5>
+        <ul>
+          <li><a href="#semesters">All Semesters</a></li>
+          <li><a href="#semesters">Practical Books</a></li>
+          <li><a href="#semesters">MCQ Banks</a></li>
+          <li><a href="#semesters">Viva Guides</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Connect</h5>
+        <ul>
+          <li><a href="#mentorship">Book a Session</a></li>
+          <li><a href="https://sites.google.com/view/faizanishaqmlt/home" target="_blank">Portfolio</a></li>
+          <li><a href="mailto:m.faizan.buziness@gmail.com">Email Faizan</a></li>
+          <li><a href="https://wa.me/923340291818" target="_blank">WhatsApp</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>More</h5>
+        <ul>
+          <li><a href="../index.html#support">Support the Platform</a></li>
+          <li><a href="#mentorship">Contact Faizan</a></li>
+          <li><a href="../index.html">← Semester Saviours Home</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 MLT · Part of UHS Semester Saviours · Built by Faizan Ishaq · DGKMC, D.G. Khan</span>
+      <span>Free forever · No ads · No paywall</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Nav toggle
+document.getElementById('navToggle').addEventListener('click',function(){
+  const l=document.getElementById('navLinks');l.classList.toggle('open');
+  this.textContent=l.classList.contains('open')?'✕':'☰';
+});
+
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',function(e){
+    const t=document.querySelector(this.getAttribute('href'));
+    if(t){e.preventDefault();window.scrollTo({top:t.offsetTop-80,behavior:'smooth'});document.getElementById('navLinks').classList.remove('open');document.getElementById('navToggle').textContent='☰';}
+  });
+});
+
+// Cursor glow
+const glow=document.getElementById('cursorGlow');
+document.addEventListener('mousemove',e=>{
+  glow.style.left=e.clientX+'px';glow.style.top=e.clientY+'px';glow.style.opacity='1';
+});
+document.addEventListener('mouseleave',()=>glow.style.opacity='0');
+
+// Particles (pink/violet for gram stain)
+const container=document.getElementById('heroParticles');
+for(let i=0;i<25;i++){
+  const p=document.createElement('div');
+  p.className='particle';
+  const isViolet=Math.random()>0.5;
+  p.style.cssText=`left:${Math.random()*100}%;width:${2+Math.random()*4}px;height:${2+Math.random()*4}px;animation-duration:${6+Math.random()*10}s;animation-delay:${Math.random()*10}s;opacity:${0.3+Math.random()*0.5};background:${isViolet?'rgba(168,85,247,0.6)':'rgba(244,114,182,0.6)'}`;
+  container.appendChild(p);
+}
+
+// Gram stain cells (circles floating up)
+const stainSlide=document.getElementById('stainSlide');
+for(let i=0;i<18;i++){
+  const c=document.createElement('div');
+  c.className='stain-cell';
+  const size=20+Math.random()*40;
+  c.style.cssText=`left:${Math.random()*100}%;width:${size}px;height:${size}px;animation-duration:${10+Math.random()*16}s;animation-delay:${Math.random()*14}s;border-color:${Math.random()>0.5?'rgba(168,85,247,0.9)':'rgba(244,114,182,0.9)'}`;
+  stainSlide.appendChild(c);
+}
+
+// Scroll reveal
+const reveals=document.querySelectorAll('.reveal');
+const revealObs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');revealObs.unobserve(e.target);}});
+},{threshold:0.12});
+reveals.forEach(r=>revealObs.observe(r));
+
+// Semester toggle
+function showSem(n,card){
+  const isActive=card.classList.contains('active');
+  document.querySelectorAll('.sem-card').forEach(c=>c.classList.remove('active'));
+  document.querySelectorAll('.sem-panel').forEach(p=>p.classList.remove('visible'));
+  if(!isActive){
+    card.classList.add('active');
+    const panel=document.getElementById('panel-'+n);
+    if(panel){panel.classList.add('visible');setTimeout(()=>panel.scrollIntoView({behavior:'smooth',block:'nearest'}),100);}
+  }
+}
+
+// Subject accordion
+function toggleSubject(header){
+  const links=header.nextElementSibling;
+  const isOpen=header.classList.contains('open');
+  header.classList.toggle('open',!isOpen);
+  links.classList.toggle('open',!isOpen);
+}
+
+// Toast
+function toast(msg){const t=document.getElementById('toast');t.textContent='✅ '+msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),3000);}
+</script>
+</body>
+</html>
