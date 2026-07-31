@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#2D9596">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>OTT – Operation Theater Technology | Semester Saviours</title>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1SXDV67490"></script>
+<script>
+  window.dataLayer=window.dataLayer||[];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js',new Date());
+  gtag('config','G-1SXDV67490');
+</script>
+<meta name="description" content="Free semester-wise study material, practical books, MCQ banks, and 1-on-1 guidance for Operation Theater Technology students in Pakistan.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --st:#2D9596;--std:#1A6B6C;--stdp:#0D4445;--stl:#3DB8B9;--stm:#5ECECE;--stp:#E0F7F7;--sts:#B2EBEB;
+  --stg:#0EA5A6;--stgl:#2EC4C5;--stgp:#CCFBFB;
+  --sg:#059669;--sgl:#10B981;--sgp:#D1FAE5;
+  --amber:#BA7517;--amber-light:#FAEEDA;--amber-mid:#EF9F27;
+  --gbg:#EAF3DE;--gtxt:#3B6D11;--gbdr:#97C459;
+  --bbg:#F0EEFF;--btxt:#4B45B2;--bbdr:rgba(75,69,178,0.2);
+  --ink:#1a1a1a;--inkl:#3d3d3d;--muted:#6b7280;--surface:#f4fafa;--white:#fff;
+  --border:rgba(45,149,150,0.13);
+  --ssm:0 2px 12px rgba(45,149,150,0.08);--smd:0 8px 32px rgba(45,149,150,0.12);--slg:0 16px 48px rgba(45,149,150,0.16);
+  --rmd:12px;--rlg:20px;--rxl:28px;
+}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:'DM Sans',sans-serif;background:var(--surface);color:var(--ink);overflow-x:hidden;line-height:1.6;-webkit-tap-highlight-color:transparent}
+h1,h2,h3{font-family:'DM Serif Display',serif;line-height:1.15}
+p{line-height:1.7}
+
+.cg{position:fixed;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(94,206,206,0.08) 0%,transparent 70%);pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:opacity 0.3s;opacity:0}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:200;background:rgba(244,250,250,0.93);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:0 2.5rem;display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-family:'DM Serif Display',serif;font-size:1.3rem;background:linear-gradient(135deg,var(--st),var(--stg));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:flex;align-items:center;gap:10px;text-decoration:none;transition:transform 0.2s}
+.logo:hover{transform:scale(1.03)}
+.logo-sub{font-size:0.62rem;color:var(--muted);font-weight:600;letter-spacing:0.05em;text-transform:uppercase;display:block;-webkit-text-fill-color:var(--muted)}
+.li{width:36px;height:36px;background:linear-gradient(135deg,var(--st),var(--stg));border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;animation:lp 3s ease-in-out infinite;-webkit-text-fill-color:initial}
+@keyframes lp{0%,100%{box-shadow:0 0 0 0 rgba(45,149,150,0.4)}50%{box-shadow:0 0 0 8px rgba(45,149,150,0)}}
+.nl{display:flex;gap:1.75rem;align-items:center;list-style:none}
+.nl a{text-decoration:none;color:var(--inkl);font-size:0.875rem;font-weight:500;transition:color 0.2s;position:relative}
+.nl a:not(.bn)::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:2px;background:linear-gradient(90deg,var(--st),var(--stg));border-radius:1px;transition:width 0.2s}
+.nl a:not(.bn):hover::after{width:100%}
+.nl a:hover{color:var(--st)}
+.bn{background:linear-gradient(135deg,var(--st),var(--stg))!important;color:white!important;padding:9px 22px;border-radius:999px;font-size:0.875rem;font-weight:600;transition:all 0.2s!important;display:inline-flex;align-items:center;gap:6px;box-shadow:0 4px 14px rgba(45,149,150,0.3);-webkit-text-fill-color:white!important}
+.bn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(45,149,150,0.45)!important}
+.nt{display:none;background:none;border:none;cursor:pointer;padding:4px;font-size:22px;color:var(--ink)}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:5rem 2rem 4rem;position:relative;overflow:hidden;background:linear-gradient(160deg,var(--stdp) 0%,var(--std) 40%,var(--st) 75%,var(--stg) 100%)}
+.orb{position:absolute;border-radius:50%;pointer-events:none;filter:blur(60px)}
+.o1{width:700px;height:700px;background:rgba(255,255,255,0.05);top:-200px;right:-200px;animation:of1 10s ease-in-out infinite}
+.o2{width:500px;height:500px;background:rgba(5,150,105,0.12);bottom:-150px;left:-150px;animation:of2 12s ease-in-out infinite}
+.o3{width:300px;height:300px;background:rgba(255,255,255,0.04);top:40%;left:10%;animation:of1 8s ease-in-out infinite reverse}
+.o4{width:250px;height:250px;background:rgba(94,206,206,0.18);top:20%;right:20%;animation:of2 7s ease-in-out infinite}
+@keyframes of1{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(25px,-25px) scale(1.06)}}
+@keyframes of2{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-20px,30px) scale(1.04)}}
+.hgo{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.03) 1px,transparent 1px);background-size:60px 60px;pointer-events:none}
+.ekg-wrap{position:absolute;inset:0;pointer-events:none;overflow:hidden;opacity:0.12}
+.ekg-line{position:absolute;width:200%;height:2px;background:linear-gradient(90deg,transparent 0%,transparent 20%,rgba(255,255,255,0.9) 22%,rgba(255,255,255,0.9) 23%,transparent 24%,transparent 30%,rgba(255,255,255,0.95) 32%,rgba(255,255,255,0.95) 33%,rgba(255,255,255,0.9) 34%,rgba(255,255,255,0.9) 35%,transparent 37%,transparent 100%);animation:ekgMove linear infinite}
+@keyframes ekgMove{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.hp{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.particle{position:absolute;border-radius:50%;animation:pf linear infinite}
+@keyframes pf{0%{transform:translateY(100vh) scale(0);opacity:0}10%{opacity:1}90%{opacity:1}100%{transform:translateY(-100px) scale(1);opacity:0}}
+.ot-cells{position:absolute;inset:0;pointer-events:none;overflow:hidden;opacity:0.07}
+.otc{position:absolute;animation:otcf linear infinite}
+@keyframes otcf{0%{transform:translateY(110vh) rotate(0deg);opacity:0}10%{opacity:1}90%{opacity:1}100%{transform:translateY(-10vh) rotate(180deg);opacity:0}}
+
+.hi{text-align:center;position:relative;z-index:1;max-width:880px;margin:0 auto}
+.he{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);border-radius:999px;padding:7px 20px;font-size:0.75rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.9);margin-bottom:1.75rem;backdrop-filter:blur(8px);animation:fid 0.8s ease both}
+@keyframes fid{from{opacity:0;transform:translateY(-15px)}to{opacity:1;transform:translateY(0)}}
+.hed{width:7px;height:7px;border-radius:50%;background:var(--stm);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.5;transform:scale(1.6)}}
+.hero h1{font-size:clamp(2.6rem,6.5vw,5rem);color:white;line-height:1.05;margin-bottom:0.5rem;animation:fiu 0.8s 0.2s ease both}
+@keyframes fiu{from{opacity:0;transform:translateY(25px)}to{opacity:1;transform:translateY(0)}}
+.hero h1 em{color:var(--stm);font-style:italic;position:relative}
+.hero h1 em::after{content:'';position:absolute;bottom:-4px;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--stm),transparent);border-radius:2px}
+.hero-abbr{font-size:0.85rem;color:rgba(255,255,255,0.75);letter-spacing:0.12em;text-transform:uppercase;font-weight:700;margin-bottom:1.25rem;animation:fiu 0.8s 0.3s ease both;display:block;text-shadow:0 1px 6px rgba(0,0,0,0.3)}
+.hsub{font-size:1.05rem;color:rgba(255,255,255,0.75);line-height:1.8;max-width:620px;margin:0 auto 2.5rem;animation:fiu 0.8s 0.35s ease both}
+.hsts{display:flex;gap:2.5rem;justify-content:center;flex-wrap:wrap;margin-bottom:3rem;padding-bottom:2.5rem;border-bottom:1px solid rgba(255,255,255,0.12);animation:fiu 0.8s 0.45s ease both}
+.hsn{font-family:'DM Serif Display',serif;font-size:2.2rem;color:white;display:block;line-height:1}
+.hsl{font-size:0.7rem;color:rgba(255,255,255,0.72);text-transform:uppercase;letter-spacing:0.07em;font-weight:700;margin-top:5px;display:block}
+.ha{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;animation:fiu 0.8s 0.55s ease both;margin-bottom:1.75rem}
+.btp{display:inline-flex;align-items:center;gap:8px;background:white;color:var(--st);padding:14px 30px;border-radius:999px;font-size:0.95rem;font-weight:700;text-decoration:none;transition:all 0.25s;box-shadow:0 4px 20px rgba(0,0,0,0.2);font-family:'DM Sans',sans-serif}
+.btp:hover{transform:translateY(-3px);box-shadow:0 8px 30px rgba(0,0,0,0.25)}
+.btg{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.12);border:1.5px solid rgba(255,255,255,0.3);color:white;padding:14px 30px;border-radius:999px;font-size:0.95rem;font-weight:600;text-decoration:none;transition:all 0.25s;backdrop-filter:blur(8px);font-family:'DM Sans',sans-serif}
+.btg:hover{background:rgba(255,255,255,0.22);transform:translateY(-3px)}
+.hfc-row{display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap;animation:fiu 0.8s 0.65s ease both}
+.hfc{background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);border-radius:var(--rmd);padding:10px 16px;font-size:0.78rem;font-weight:600;color:white;display:inline-flex;align-items:center;gap:8px;backdrop-filter:blur(8px);animation:fc 4s ease-in-out infinite}
+.hfc:nth-child(2){animation-delay:1s}.hfc:nth-child(3){animation-delay:2s}
+@keyframes fc{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+.sh{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;color:rgba(255,255,255,0.35);font-size:0.7rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;animation:sb 2s ease-in-out infinite}
+@keyframes sb{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(8px)}}
+.scl{width:1px;height:40px;background:linear-gradient(to bottom,rgba(255,255,255,0.4),transparent)}
+
+/* STATS BAND */
+.sb2{background:linear-gradient(135deg,var(--stdp),var(--std),var(--st));padding:4.5rem 2.5rem;position:relative;overflow:hidden}
+.sb2::before{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,0.05) 1px,transparent 1px);background-size:30px 30px}
+.sbi{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;text-align:center;position:relative;z-index:1}
+.bst{position:relative}
+.bst::after{content:'';position:absolute;right:0;top:20%;height:60%;width:1px;background:rgba(255,255,255,0.12)}
+.bst:last-child::after{display:none}
+.bsn{font-family:'DM Serif Display',serif;font-size:2.8rem;color:white;display:block;line-height:1;margin-bottom:6px}
+.bsl{font-size:0.72rem;color:rgba(255,255,255,0.78);text-transform:uppercase;letter-spacing:0.07em;font-weight:700}
+
+/* COMING SOON BANNER */
+.cs-banner{background:linear-gradient(135deg,var(--stp),var(--stgp));border:1px solid rgba(45,149,150,0.2);border-radius:var(--rlg);padding:2rem 2.5rem;display:flex;align-items:center;gap:1.5rem;margin-bottom:3rem;box-shadow:var(--ssm)}
+.cs-icon{font-size:3rem;animation:pulse2 2.5s ease-in-out infinite;flex-shrink:0}
+@keyframes pulse2{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+.cs-text h3{font-family:'DM Serif Display',serif;font-size:1.4rem;color:var(--st);margin-bottom:0.3rem}
+.cs-text p{font-size:0.9rem;color:var(--muted);line-height:1.6}
+.cs-badge{background:linear-gradient(135deg,var(--st),var(--stg));color:white;font-size:0.7rem;font-weight:700;padding:5px 14px;border-radius:999px;letter-spacing:0.06em;text-transform:uppercase;white-space:nowrap;flex-shrink:0;margin-left:auto;box-shadow:0 4px 12px rgba(45,149,150,0.3)}
+
+/* SHARED */
+.container{max-width:1120px;margin:0 auto;padding:0 2.5rem}
+.section{padding:6rem 0}
+.divider{height:1px;background:var(--border);max-width:1120px;margin:0 auto}
+.sey{font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--st);margin-bottom:0.75rem;display:flex;align-items:center;gap:8px}
+.sey::before{content:'';display:block;width:20px;height:2px;background:linear-gradient(90deg,var(--st),var(--stg));border-radius:1px}
+.sti{font-family:'DM Serif Display',serif;font-size:clamp(2rem,4vw,2.8rem);color:var(--ink);margin-bottom:1rem}
+.ssu{font-size:1rem;color:var(--muted);line-height:1.75;max-width:560px;margin-bottom:3rem}
+
+/* STEPS */
+.sgr{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0;position:relative}
+.sgr::before{content:'';position:absolute;top:28px;left:10%;right:10%;height:2px;background:linear-gradient(90deg,var(--stp),var(--stm),var(--stgl),var(--stp));z-index:0}
+.stpc{text-align:center;padding:0 1.5rem;position:relative;z-index:1}
+.stn{width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--st),var(--stg));color:white;font-family:'DM Serif Display',serif;font-size:1.5rem;display:flex;align-items:center;justify-content:center;margin:0 auto 1.25rem;box-shadow:0 0 0 8px var(--stp)}
+.stpc h4{font-family:'DM Serif Display',serif;font-size:1.1rem;color:var(--ink);margin-bottom:0.5rem}
+.stpc p{font-size:0.85rem;color:var(--muted);line-height:1.65}
+
+/* WHY CARDS */
+.wgr{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem}
+.wc{background:var(--white);border:1px solid var(--border);border-radius:var(--rlg);padding:2rem;transition:all 0.25s;box-shadow:var(--ssm);position:relative;overflow:hidden}
+.wc::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,var(--stp),transparent);opacity:0;transition:opacity 0.3s}
+.wc:hover{transform:translateY(-5px);box-shadow:var(--slg);border-color:rgba(45,149,150,0.25)}
+.wc:hover::before{opacity:0.5}
+.wi{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:1.25rem;position:relative;z-index:1;transition:transform 0.2s}
+.wc:hover .wi{transform:scale(1.1) rotate(5deg)}
+.wc h3{font-family:'DM Serif Display',serif;font-size:1.2rem;color:var(--ink);margin-bottom:0.5rem;position:relative;z-index:1}
+.wc p{font-size:0.88rem;color:var(--muted);line-height:1.7;position:relative;z-index:1}
+
+/* TAGS */
+.tag{background:var(--stp);color:var(--st);font-size:0.7rem;font-weight:600;padding:3px 10px;border-radius:999px}
+.tg{background:var(--gbg);color:var(--gtxt);border:1px solid var(--gbdr);font-size:0.7rem;font-weight:700;padding:3px 10px;border-radius:999px}
+.tcs{background:linear-gradient(135deg,var(--stp),var(--stgp));color:var(--st);border:1px solid rgba(45,149,150,0.2);font-size:0.7rem;font-weight:700;padding:3px 10px;border-radius:999px}
+
+/* SEMESTERS */
+.smg{display:grid;gap:1rem;margin-bottom:2.5rem}
+.smc{background:var(--white);border:1px solid var(--border);border-radius:var(--rmd);padding:1.5rem 1rem;text-align:center;cursor:pointer;transition:all 0.25s;position:relative;overflow:visible}
+.smc:hover{border-color:var(--stm);background:var(--stp);transform:translateY(-4px);box-shadow:var(--smd)}
+.smc.active{border-color:var(--st);background:var(--stp);box-shadow:0 0 0 3px rgba(45,149,150,0.15)}
+.smn{font-family:'DM Serif Display',serif;font-size:2.4rem;background:linear-gradient(135deg,var(--st),var(--stg));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:block;line-height:1;margin-bottom:4px}
+.sml{font-size:0.68rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:0.05em}
+.sms{font-size:0.7rem;color:var(--st);margin-top:6px;font-weight:500}
+.nb{position:absolute;top:-8px;right:-8px;background:linear-gradient(135deg,var(--st),var(--stg));color:white;font-size:0.55rem;font-weight:700;padding:3px 7px;border-radius:999px;letter-spacing:0.05em;text-transform:uppercase}
+.smp{background:var(--white);border-radius:var(--rlg);border:1px solid var(--border);padding:2rem 2.5rem;display:none;box-shadow:var(--ssm)}
+.smp.visible{display:block;animation:fiu 0.35s ease}
+.smph{display:flex;align-items:center;justify-content:space-between;margin-bottom:1.5rem;padding-bottom:1.25rem;border-bottom:1px solid var(--border)}
+.smpt{font-family:'DM Serif Display',serif;font-size:1.4rem;color:var(--ink)}
+.rl{display:flex;flex-direction:column;gap:0.6rem}
+
+/* CATEGORY HEADERS */
+.cat-header{display:flex;align-items:center;gap:10px;padding:0.6rem 0;margin-top:1rem;margin-bottom:0.25rem}
+.cat-header:first-child{margin-top:0}
+.cat-label{font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--st);background:var(--stp);border:1px solid rgba(45,149,150,0.2);padding:3px 10px;border-radius:999px}
+.cat-line{flex:1;height:1px;background:var(--border)}
+
+/* SUBJECT CARDS */
+.sjc{background:var(--white);border:1px solid var(--border);border-radius:var(--rmd);overflow:hidden;transition:box-shadow 0.2s,transform 0.2s}
+.sjc:hover{box-shadow:var(--smd);transform:translateY(-1px)}
+.sjh{display:flex;align-items:center;justify-content:space-between;padding:1rem 1.25rem;cursor:pointer;transition:background 0.2s;user-select:none}
+.sjh:hover{background:var(--stp)}
+.sjh.open{background:var(--stp);border-bottom:1px solid var(--border)}
+.sjl{display:flex;align-items:center;gap:12px}
+.sji{font-size:20px;flex-shrink:0}
+.sjn{font-size:0.92rem;font-weight:600;color:var(--ink);display:block}
+.sjd{font-size:0.73rem;color:var(--muted);margin-top:1px}
+.sjch{font-size:0.75rem;color:var(--muted);transition:transform 0.25s;flex-shrink:0;margin-left:8px}
+.sjh.open .sjch{transform:rotate(180deg)}
+.sjlk{display:none;padding:0.75rem 1rem 0.85rem;background:var(--surface)}
+.sjlk.open{display:block;animation:fiu 0.2s ease}
+.slkg{display:grid;grid-template-columns:repeat(auto-fill,minmax(175px,1fr));gap:0.5rem}
+.cr-badge{background:var(--sts);color:var(--std);border:1px solid rgba(45,149,150,0.2);font-size:0.65rem;font-weight:700;padding:2px 8px;border-radius:999px;margin-left:8px;vertical-align:middle}
+.pr-badge{background:var(--sgp);color:var(--sg);border:1px solid rgba(5,150,105,0.2);font-size:0.62rem;font-weight:700;padding:2px 7px;border-radius:999px;margin-left:4px;vertical-align:middle}
+
+/* SUBLINKS */
+.sl2{display:flex;align-items:center;gap:8px;padding:9px 13px;border-radius:8px;font-size:0.8rem;font-weight:500;text-decoration:none;transition:all 0.18s;border:1px solid transparent}
+.slic{font-size:14px;flex-shrink:0;transition:transform 0.2s}
+.sl2:hover .slic{transform:scale(1.2)}
+.sl-mcq{background:var(--amber-light);color:var(--amber);border-color:rgba(186,117,23,0.2)}
+.sl-mcq:hover{background:#F5D49A;border-color:var(--amber-mid);transform:translateY(-1px)}
+.sl-notes{background:var(--stp);color:var(--st);border-color:var(--border)}
+.sl-notes:hover{background:var(--sts);border-color:var(--stm);transform:translateY(-1px)}
+.sl-prac{background:var(--sgp);color:var(--sg);border-color:rgba(5,150,105,0.15)}
+.sl-prac:hover{background:#A7F3D0;border-color:var(--sgl);transform:translateY(-1px)}
+.sl-viva{background:var(--stgp);color:var(--stg);border-color:rgba(14,165,166,0.2)}
+.sl-viva:hover{background:#99F6F6;border-color:var(--stgl);transform:translateY(-1px)}
+.sl-book{background:var(--bbg);color:var(--btxt);border-color:var(--bbdr);animation:bsh 3s ease-in-out infinite}
+@keyframes bsh{0%,100%{box-shadow:0 0 0 0 rgba(75,69,178,0)}50%{box-shadow:0 0 8px 2px rgba(75,69,178,0.18)}}
+.sl-book:hover{background:#DDD9FB;border-color:#6C63E8;transform:translateY(-1px);animation:none}
+.sl-book .slic{animation:bb 2s ease-in-out infinite}
+@keyframes bb{0%,100%{transform:rotate(0deg) scale(1)}25%{transform:rotate(-8deg) scale(1.1)}75%{transform:rotate(8deg) scale(1.1)}}
+.sl-book:hover .slic{animation:none;transform:scale(1.25)}
+.sl-soon{background:var(--surface);color:var(--muted);border-color:var(--border);cursor:default;opacity:0.65}
+
+/* CONTACT SECTION */
+.contact-section{background:linear-gradient(135deg,var(--stdp),var(--std));padding:5rem 2.5rem;position:relative;overflow:hidden}
+.contact-section::before{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,0.05) 1px,transparent 1px);background-size:28px 28px}
+.contact-inner{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;position:relative;z-index:1}
+.contact-text .sey{color:#EFFFFE}
+.contact-text .sey::before{background:linear-gradient(90deg,#EFFFFE,transparent)}
+.contact-text h2{font-family:'DM Serif Display',serif;font-size:clamp(1.8rem,3vw,2.5rem);color:white;margin-bottom:1rem;line-height:1.2}
+.contact-text p{color:rgba(255,255,255,0.85);font-size:0.95rem;line-height:1.8;margin-bottom:2rem}
+.contact-card{background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:var(--rxl);padding:2.5rem;backdrop-filter:blur(10px)}
+.contact-avatar{width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,var(--stp),var(--stgp));border:3px solid rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;font-family:'DM Serif Display',serif;font-size:1.8rem;color:var(--st);margin-bottom:1.25rem}
+.contact-name{font-family:'DM Serif Display',serif;font-size:1.5rem;color:white;margin-bottom:4px}
+.contact-role{font-size:0.82rem;color:#FFFFFF;font-weight:700;margin-bottom:0.5rem}
+.contact-dept{font-size:0.78rem;color:rgba(255,255,255,0.65);margin-bottom:1.25rem}
+.contact-tags{display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:1.5rem}
+.contact-tag{background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.28);color:#FFFFFF;font-size:0.68rem;font-weight:700;padding:4px 12px;border-radius:999px}
+.contact-links{display:flex;flex-direction:column;gap:0.75rem}
+.contact-link{display:flex;align-items:center;gap:12px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.14);border-radius:var(--rmd);padding:13px 16px;color:white;text-decoration:none;font-size:0.875rem;font-weight:500;transition:all 0.2s}
+.contact-link:hover{background:rgba(255,255,255,0.15);transform:translateX(4px)}
+.contact-link-icon{font-size:20px;flex-shrink:0}
+.contact-link strong{display:block;font-size:0.82rem;margin-bottom:1px}
+.contact-link span{font-size:0.75rem;opacity:0.8}
+
+/* BACK BANNER */
+.bb2{background:linear-gradient(135deg,var(--stp),var(--stgp));border-bottom:1px solid rgba(45,149,150,0.12);padding:8px 2.5rem;display:flex;align-items:center;gap:8px;font-size:0.78rem;color:var(--st);font-weight:500}
+.bb2 a{color:var(--st);text-decoration:none;font-weight:700;display:inline-flex;align-items:center;gap:4px}
+.bb2 a:hover{color:var(--stg)}
+.bbd{color:var(--muted)}
+
+/* FOOTER */
+footer{background:var(--ink);color:rgba(255,255,255,0.55);padding:4rem 2.5rem 2.5rem}
+.fi{max-width:1120px;margin:0 auto}
+.ft{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem;padding-bottom:3rem;border-bottom:1px solid rgba(255,255,255,0.08)}
+.flo{font-family:'DM Serif Display',serif;font-size:1.4rem;color:var(--stm);display:flex;align-items:center;gap:8px;margin-bottom:0.75rem}
+.fli{width:34px;height:34px;background:linear-gradient(135deg,var(--st),var(--stg));border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px}
+.fd{font-size:0.875rem;line-height:1.7;color:rgba(255,255,255,0.4);max-width:260px}
+.fc2 h5{font-size:0.75rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-bottom:1rem}
+.fc2 ul{list-style:none;display:flex;flex-direction:column;gap:0.6rem}
+.fc2 a{text-decoration:none;font-size:0.875rem;color:rgba(255,255,255,0.4);transition:color 0.2s}
+.fc2 a:hover{color:var(--stm)}
+.fbo{display:flex;align-items:center;justify-content:space-between;font-size:0.78rem;color:rgba(255,255,255,0.22);flex-wrap:wrap;gap:1rem}
+
+/* TOAST */
+.toast{position:fixed;bottom:2rem;right:2rem;background:linear-gradient(135deg,var(--st),var(--stg));color:white;padding:14px 22px;border-radius:12px;font-size:0.9rem;font-weight:500;box-shadow:var(--slg);transform:translateY(80px);opacity:0;transition:all 0.4s cubic-bezier(0.34,1.56,0.64,1);z-index:999;display:flex;align-items:center;gap:10px}
+.toast.show{transform:translateY(0);opacity:1}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity 0.7s ease,transform 0.7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.rd1{transition-delay:0.1s}.rd2{transition-delay:0.2s}.rd3{transition-delay:0.3s}
+
+/* RESPONSIVE */
+@media(max-width:1100px){.ft{grid-template-columns:1fr 1fr;gap:2rem}}
+@media(max-width:900px){.smg{grid-template-columns:repeat(2,1fr)!important}.sgr{grid-template-columns:repeat(2,1fr);gap:2rem}.sgr::before{display:none}.wgr{grid-template-columns:repeat(2,1fr)}.slkg{grid-template-columns:repeat(2,1fr)}.sbi{grid-template-columns:repeat(2,1fr)}.cs-banner{flex-direction:column;text-align:center}.cs-badge{margin:0 auto}.contact-inner{grid-template-columns:1fr}}
+@media(max-width:768px){nav{padding:0 1.25rem}.container{padding:0 1.5rem}.section{padding:3.5rem 0}.hero{padding:4rem 1.5rem 3rem;min-height:auto}.smg{grid-template-columns:repeat(2,1fr)!important;gap:0.75rem}.smc{padding:1.2rem 0.75rem}.smn{font-size:2rem}.smp{padding:1.5rem}.sjh{padding:0.9rem 1rem}.sjn{font-size:0.88rem}.slkg{grid-template-columns:repeat(2,1fr);gap:0.4rem}.sl2{font-size:0.76rem;padding:8px 10px}.ft{grid-template-columns:1fr 1fr;gap:1.5rem}.sgr{grid-template-columns:1fr 1fr}.wgr{grid-template-columns:1fr 1fr}.contact-section{padding:3.5rem 1.5rem}}
+@media(max-width:640px){nav{padding:0 1rem;height:56px}.logo{font-size:1.1rem}.li{width:30px;height:30px;font-size:15px}.nl{display:none}.nl.open{display:flex;flex-direction:column;position:fixed;inset:56px 0 0 0;background:rgba(244,250,250,0.98);backdrop-filter:blur(16px);padding:2rem 1.5rem;gap:1.25rem;z-index:199;overflow-y:auto}.nl.open a{font-size:1rem;padding:0.5rem 0;border-bottom:1px solid var(--border)}.nt{display:block}.hero{padding:3rem 1rem 2.5rem;min-height:auto}.hero h1{font-size:clamp(1.75rem,8vw,2.5rem)}.hsub{font-size:0.95rem}.ha{flex-direction:column;gap:0.75rem}.ha a{width:100%;justify-content:center}.hsts{gap:1.25rem}.container{padding:0 1rem}.section{padding:3rem 0}.sti{font-size:clamp(1.5rem,6vw,2rem)}.wgr{grid-template-columns:1fr;gap:1rem}.wc{padding:1.5rem}.sgr{grid-template-columns:1fr;gap:1.5rem}.smg{grid-template-columns:repeat(2,1fr)!important;gap:0.6rem}.smc{padding:1rem 0.5rem}.smn{font-size:1.8rem}.sml{font-size:0.6rem}.sms{font-size:0.62rem}.nb{font-size:0.48rem;padding:2px 6px;top:-6px;right:-6px}.smp{padding:1rem}.smph{flex-direction:column;align-items:flex-start;gap:0.5rem}.smpt{font-size:1.15rem}.sjh{padding:0.85rem 0.9rem}.sji{font-size:17px}.sjn{font-size:0.84rem}.sjd{font-size:0.68rem}.sjlk{padding:0.6rem 0.75rem 0.75rem}.slkg{grid-template-columns:1fr;gap:0.4rem}.sl2{font-size:0.78rem;padding:9px 12px}.ft{grid-template-columns:1fr;gap:1.75rem}footer{padding:3rem 1.25rem 2rem}.fbo{flex-direction:column;gap:0.5rem;text-align:center}.toast{bottom:1rem;right:1rem;left:1rem;font-size:0.85rem;padding:12px 16px}.sb2{padding:3rem 1.25rem}.sbi{grid-template-columns:repeat(2,1fr);gap:1.5rem}.bst::after{display:none}.hfc-row{gap:0.5rem}.hfc{font-size:0.7rem;padding:8px 12px}.bb2{padding:8px 1rem}.cs-banner{padding:1.5rem}.cr-badge{display:none}}
+@media(max-width:400px){.hero h1{font-size:1.6rem}.smg{grid-template-columns:repeat(2,1fr)!important}.slkg{grid-template-columns:1fr}}
+@media(hover:none) and (pointer:coarse){.sl2:hover{transform:none}.wc:hover{transform:none}.smc:hover{transform:none}.btp:hover,.btg:hover{transform:none}.sl2{padding:11px 13px}.sjh{padding:1.1rem 1.25rem}}
+</style>
+</head>
+<body>
+<div class="cg" id="cg"></div>
+<div class="toast" id="toast">✅ Opening resource...</div>
+
+<!-- BACK BANNER -->
+<div class="bb2">
+  <span>🎓</span>
+  <a href="../index.html">← Back to Semester Saviours</a>
+  <span class="bbd">·</span>
+  <span>Operation Theater Technology (OTT)</span>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="logo">
+    <div class="li">🩺</div>
+    <div>
+      Operation Theater Technology
+      <span class="logo-sub">OTT · Semester Saviours</span>
+    </div>
+  </a>
+  <ul class="nl" id="navLinks">
+    <li><a href="#how">How it works</a></li>
+    <li><a href="#semesters">Resources</a></li>
+    <li><a href="#contact" class="bn">📞 Contact Us</a></li>
+  </ul>
+  <button class="nt" id="navToggle" aria-label="Toggle menu">☰</button>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div><div class="orb o4"></div>
+  <div class="hgo"></div>
+  <div class="ekg-wrap" id="ekgWrap"></div>
+  <div class="hp" id="heroParticles"></div>
+  <div class="ot-cells" id="otCells"></div>
+
+  <div class="hi">
+    <div class="he"><span class="hed"></span>Free OTT Education · Pakistan · UHS Aligned</div>
+    <h1>Operation Theater<br><em>Technology</em></h1>
+    <span class="hero-abbr">OTT · B.Sc. Operation Theater Technology</span>
+    <p class="hsub">Free semester-wise study material for Operation Theater Technology students across Pakistan. Notes, MCQ banks, practical books, viva prep — all free, always.</p>
+    <div class="hsts">
+      <div><span class="hsn">2</span><span class="hsl">Semesters Mapped</span></div>
+      <div><span class="hsn">16</span><span class="hsl">Subjects</span></div>
+      <div><span class="hsn">100%</span><span class="hsl">Free Forever</span></div>
+      <div><span class="hsn">UHS</span><span class="hsl">Aligned</span></div>
+    </div>
+    <div class="ha">
+      <a href="#semesters" class="btp">📂 Browse Resources</a>
+      <a href="#contact" class="btg">📞 Contact Us</a>
+    </div>
+    <div class="hfc-row">
+      <div class="hfc">🔪 Scrub · Circulate · Assist</div>
+      <div class="hfc">⚡ Sem 3 &amp; 4 Coming Soon</div>
+      <div class="hfc">🎯 UHS B.Sc. OTT Curriculum</div>
+    </div>
+  </div>
+  <div class="sh"><span>scroll to explore</span><div class="scl"></div></div>
+</div>
+
+<!-- STATS BAND -->
+<div class="sb2">
+  <div class="sbi">
+    <div class="bst reveal"><span class="bsn">16</span><span class="bsl">Subjects Mapped</span></div>
+    <div class="bst reveal rd1"><span class="bsn">44</span><span class="bsl">Credit Hours</span></div>
+    <div class="bst reveal rd2"><span class="bsn">PKR 0</span><span class="bsl">Cost to Students</span></div>
+    <div class="bst reveal rd3"><span class="bsn">∞</span><span class="bsl">Knowledge</span></div>
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<section id="how" class="section">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:3.5rem">
+      <div class="sey reveal" style="justify-content:center">Simple process</div>
+      <div class="sti reveal">Four steps to study smarter</div>
+    </div>
+    <div class="sgr">
+      <div class="stpc reveal"><div class="stn">1</div><h4>Pick your semester</h4><p>Browse the UHS B.Sc. OTT curriculum — Semester 3 &amp; 4 fully mapped and ready.</p></div>
+      <div class="stpc reveal rd1"><div class="stn">2</div><h4>Access for free</h4><p>Click any resource to open instantly — no login, no paywall, no catch, ever.</p></div>
+      <div class="stpc reveal rd2"><div class="stn">3</div><h4>Need help?</h4><p>Contact the OTT representative directly via WhatsApp or email — response within 24 hours.</p></div>
+      <div class="stpc reveal rd3"><div class="stn">4</div><h4>Support the platform</h4><p>Visit Semester Saviours main page to support the entire platform and keep it free.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- WHAT YOU GET -->
+<section class="section">
+  <div class="container">
+    <div class="sey reveal">What you get</div>
+    <div class="sti reveal">Everything an OTT student needs</div>
+    <p class="ssu reveal">Curated, exam-ready content built around the UHS B.Sc. OTT curriculum — surgical instruments, sterile technique, pharmacology, anatomy, and clinical practice.</p>
+    <div class="wgr">
+      <div class="wc reveal"><div class="wi" style="background:var(--stp)">🔪</div><h3>OT Practical Guides</h3><p>Step-by-step guides for surgical instrument handling, scrub technique, draping, sterilization, and aseptic procedures.</p></div>
+      <div class="wc reveal rd1"><div class="wi" style="background:var(--amber-light)">📝</div><h3>MCQ Banks</h3><p>Topic-wise MCQ banks for pathology, anatomy, physiology, pharmacology, and microbiology — with full explanations.</p></div>
+      <div class="wc reveal rd2"><div class="wi" style="background:var(--stgp)">📊</div><h3>Semester Notes</h3><p>Organized notes for every OTT subject — medical sciences, OT fundamentals, and general education — ready for revision.</p></div>
+      <div class="wc reveal"><div class="wi" style="background:var(--sts)">🎯</div><h3>Viva Prep Guides</h3><p>Commonly asked viva questions from UHS OTT clinical rotations — instruments, sterility, pharmacology, and OT protocols.</p></div>
+      <div class="wc reveal rd1" style="border-color:var(--bbdr)"><div class="wi" style="background:var(--bbg)">📚</div><h3 style="color:var(--btxt)">Recommended Books</h3><p>Curated reading lists per subject — the exact textbooks that actually help OTT students at UHS-affiliated colleges.</p></div>
+      <div class="wc reveal rd2"><div class="wi" style="background:var(--sgp)">🤝</div><h3>Direct Contact</h3><p>Reach the OTT representative directly for guidance on OT technique, surgical prep, and clinical placement readiness.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- SEMESTERS -->
+<section id="semesters" class="section">
+  <div class="container">
+    <div class="sey reveal">Browse by semester</div>
+    <div class="sti reveal">Pick your semester</div>
+    <p class="ssu reveal">Semesters 3 &amp; 4 of B.Sc. Operation Theater Technology fully mapped. All subjects structured — resources coming very soon.</p>
+
+    <div class="cs-banner reveal">
+      <div class="cs-icon">🩺</div>
+      <div class="cs-text">
+        <h3>Resources are being prepared!</h3>
+        <p>Operation Theater Technology content is actively being built. All 16 subjects across Semester 3 &amp; 4 are mapped and structured — notes, MCQ banks, practical books, and viva guides are coming very soon. Contact us in the meantime for any guidance.</p>
+      </div>
+      <div class="cs-badge">⏳ Coming Soon</div>
+    </div>
+
+    <div class="smg reveal" style="grid-template-columns:repeat(4,1fr)">
+      <div class="smc" onclick="showSem(1,this)"><span class="smn">1</span><div class="sml">Semester</div><div class="sms">Coming Soon</div></div>
+      <div class="smc" onclick="showSem(2,this)"><span class="smn">2</span><div class="sml">Semester</div><div class="sms">Coming Soon</div></div>
+      <div class="smc" onclick="showSem(3,this)"><div class="nb">MAPPED</div><span class="smn">3</span><div class="sml">Semester</div><div class="sms">Gen Path · Anatomy · OT Fund.</div></div>
+      <div class="smc" onclick="showSem(4,this)"><div class="nb">MAPPED</div><span class="smn">4</span><div class="sml">Semester</div><div class="sms">Pharmacology · Micro · Physics</div></div>
+    </div>
+
+    <div class="smp" id="panel-1"><div class="smph"><div class="smpt">Semester 1 — Coming Soon</div></div><p style="color:var(--muted);font-size:0.9rem">Resources are being prepared. Contact us for guidance in the meantime.</p></div>
+    <div class="smp" id="panel-2"><div class="smph"><div class="smpt">Semester 2 — Coming Soon</div></div><p style="color:var(--muted);font-size:0.9rem">Resources are being prepared. Contact us for guidance in the meantime.</p></div>
+
+    <!-- SEM 3 -->
+    <div class="smp" id="panel-3">
+      <div class="smph">
+        <div><div class="smpt">Semester 3 — Operation Theater Technology</div><p style="font-size:0.85rem;color:var(--muted);margin-top:4px">22 Credit Hours · UHS B.Sc. OTT</p></div>
+        <span class="tcs">Resources Coming Soon</span>
+      </div>
+      <div class="rl">
+        <div class="cat-header"><div class="cat-line"></div><span class="cat-label">🔬 Core Medical Subjects</span><div class="cat-line"></div></div>
+        <div class="sjc"><div class="sjh" onclick="tS(this)"><div class="sjl"><span class="sji">🫀</span><div><span class="sjn">General Pathology <span class="cr-badge">3 CH</span></span><span class="sjd">Inflammation, cell injury, neoplasia, healing &amp; repair</span></div></div><span class="sjch">▼</span></div><div class="sjlk"><div class="slkg"><span class="sl2 sl-soon"><span class="slic">📝</span> MCQ Bank — Soon</span><span class="sl2 sl-soon"><span class="slic">📖</span> Revision Notes — Soon</span><span class="sl2 sl-soon"><span class="slic">🔬</span> Practical Book — Soon</span><span class="sl2 sl-soon"><span class="slic">🎯</span> Viva Prep — Soon</span><span class="sl2 sl-soon"><span class="slic">📚</span> Recommended Books — Soon</span></div></div></div>
+        <div class="sjc"><div class="sjh" onclick="tS(this)"><div class="sjl"><span class="sji">🦴</span><div><span class="sjn">Anatomy II <span class="cr-badge">3 CH</span></span><span class="sjd">Regional anatomy relevant to surgical exposure &amp; OT positioning</span></div></div><span class="sjch">▼</span></div><div class="sjlk"><div class="slkg"><span class="sl2 sl-soon"><span class="slic">📝</span> MCQ Bank — Soon</span><span class="sl2 sl-soon"><span class="slic">📖</span> Revision Notes — Soon</span><span class="sl2 sl-soon"><span class="slic">🔬</span> Practical Book — Soon</span><span class="sl2 sl-soon"><span class="slic">🎯</span> Viva Prep — Soon</span><span class="sl2 sl-soon"><span class="slic">📚</span> Recommended Books — Soon</span></div></div></div>
+        <div class="sjc"><div class="sjh" onclick="tS(this)"><div class="sjl"><span class="sji">⚡</span><div><span class="sjn">Physiology II <span class="cr-badge">3 CH</span></span><span class="sjd">Cardiovascular, respiratory &amp; renal physiology for surgical context</span></div></div><span class="sjch">▼</span></div><div class="sjlk"><div class="slkg"><span class="sl2 sl-soon"><span class="slic">📝</span> MCQ Bank — Soon</span><span class="sl2 sl-soon"><span class="slic">📖</span> Revision Notes — Soon</span><span class="sl2 sl-soon"><span class="slic">🔬</span> Practical Book — Soon</span><span class="sl2 sl-soon"><span class="slic">🎯</span> Viva Prep — Soon</span><span class="sl2 sl-soon"><span class="slic">📚</span> Recommended Books — Soon</span></div></div></div>
+        <div class="cat-header"><div class="cat-line"></div><span class="cat-label">🩺 OT / Skill-Based</span><div class="cat-line"></div></div>
+        <div class="sjc"><div class="sjh" onclick="tS(this)"><div class="sjl"><span class="sji">🔪</span><div><span class="sjn">Fundamentals of Operation Theatre Technology <span class="cr-badge">3 CH</span><span class="pr-badge">2+1</span></span><span class="sjd">Scrub technique, draping, instrument handling, sterile field setup</span></div></div><span class="sjch">▼</span></div><div class="sjlk"><div class="slkg"><span class="sl2 sl-soon"><span class="slic">📝</span> MCQ Bank — Soon</span><span class="sl2 sl-soon"><span class="slic">📖</span> Revision Notes — Soon</span><span class="sl2 sl-soon"><span class="slic">🔬</span> Practical Book — Soon</span><span class="sl2 sl-soon"><span class="slic">🎯</span> Viva Prep — Soon</span><span class="sl2 sl-soon"><span class="slic">📚</span> Recommended Books — Soon</span></div></div></div>
+        <div class="cat-header"><div class="cat-line"></div><span class="cat-label">🎓 General Education</span><div class="cat-line"></div></div>
+        <div class="sjc"><div class="sjh" onclick="tS(this)"><div class="sjl"><span class="sji">💼</span><div><span class="sjn">Entrepreneurship <span class="cr-badge">2 CH</span></span><span class="sjd">Business basics, startup thinking, healthcare entrepreneurship</span></div></div><span class="sjch">▼</span></div><div class="sjlk"><div class="slkg"><span class="sl2 sl-soon"><span class="slic">📝</span> MCQ Bank — Soon</span><span class="sl2 sl-soon"><span class="slic">📖</span> Revision Notes — Soon</span><span class="sl2 sl-soon"><span class="slic">📊</span> Case Studies — Soon</span><span class="sl2 sl-soon"><span class="slic">📚</span> Recommended Books — Soon</span></div></div></div>
+        <div class="sjc"><div class="sjh" onclick="tS(this)"><div class="sjl"><span class="sji">🤝</span><div><span class="sjn">Civics &amp; Community Engagement <span class="cr-badge">2 CH</span></span><span class="sjd">Civic responsibility, community health service &amp; reflective writing</span></div></div><span class="sjch">▼</span></div><div class="sjlk"><div class="slkg"><span class="sl2 sl-soon"><span class="slic">📝</span> MCQ Bank — Soon</span><span class="sl2 sl-soon"><span class="slic">📖</span> Revision Notes — Soon</span><span class="sl2 sl-soon"><span class="slic">✍️</span> Reflective Writing — Soon</span><span class="sl2 sl-soon"><span class="slic">📚</span> Recommended Books — Soon</span></div></div></div>
+        <div class="sjc"><div class="sjh" onclick="tS(this)"><div class="sjl"><span class="sji">💻</span><div><span class="sjn">ICT Applications <span class="cr-badge">3 CH</span><span class="pr-badge">2+1</span></span><span class="sjd">Computer applications, healthcare IT, digital OT documentation</span></div></div><span class="sjch">▼</span></div><div class="sjlk"><div class="slkg"><span class="sl2 sl-soon"><span class="slic">📝</span> MCQ Bank — Soon</span><span class="sl2 sl-soon"><span class="slic">📖</span> Revision Notes — Soon</span><span class="sl2 sl-soon"><span class="slic">🔬</span> Practical — Soon</span><span class="sl2 sl-soon"><span class="slic">🎯</span> Viva Prep — Soon</span></div></div></div>
+        <div class="sjc"><div class="sjh" onclick="tS(this)"><div class="sjl"><span class="sji">📝</span><div><span class="sjn">English Proficiency I <span class="cr-badge">2 CH</span></span><span class="sjd">Essay writing, grammar, academic &amp; clinical communication</span></div></div><span class="sjch">▼</span></div><div class="sjlk"><div class="slkg"><span class="sl2 sl-soon"><span class="slic">👂</span> Listening Exercises — Soon</span><span class="sl2 sl-soon"><span class="slic">✍️</span> Writing Practice — Soon</span><span class="sl2 sl-soon"><span class="slic">📖</span> Reading Comprehension — Soon</span><span class="sl2 sl-soon"><span class="slic">🗣️</span> Speaking Practice — Soon</span></div></div></div>
+        <div class="cat-header"><div class="cat-line"></div><span class="cat-label">📓 Reflective Learning</span><div class="cat-line"></div></div>
+        <div class="sjc"><div class="sjh" onclick="tS(this)"><div class="sjl"><span class="sji">📓</span><div><span class="sjn">PERL III — Reflective Learning <span class="cr-badge">1 CH</span></span><span class="sjd">Gibbs Reflective Cycle, journal entries, OT placement portfolio</span></div></div><span class="sjch">▼</span></div><div class="sjlk"><div class="slkg"><span class="sl2 sl-soon"><span class="slic">📖</span> Gibbs Cycle Templates — Soon</span><span class="sl2 sl-soon"><span class="slic">📄</span> Sample Journal Entries — Soon</span><span class="sl2 sl-soon"><span class="slic">🎯</span> Portfolio Guide — Soon</span></div></div></div>
+      </div>
+    </div>
+
+    <!-- SEM 4 -->
+    <div class="smp" id="panel-4">
+      <div class="smph">
+        <div><div class="smpt">Semester 4 — Operation Theater Technology</div><p style="font-size:0.85rem;color:var(--muted);margin-top:4px">22 Credit Hours · UHS B.Sc. OTT</p></div>
+        <span class="tcs">Resources Coming Soon</span>
+      </div>
+      <div class="rl">
+        <div class="cat-header"><div class="cat-line"></div><span class="cat-label">🔬 Core Medical Subjects</span><div class="cat-line"></div></div>
+        <div class="sjc"><div class="sjh" onclick="tS(this)"><div class="sjl"><span class="sji">💊</span><div><span class="sjn">Pharmacology <span class="cr-badge">3 CH</span><span class="pr-badge">2+1</span></span><span class="sjd">Anesthetic agents, analgesics, antibiotics &amp; drugs used in OT</span></div></div><span class="sjch">▼</span></div><div class="sjlk"><div class="slkg"><span class="sl2 sl-soon"><span class="slic">📝</span> MCQ Bank — Soon</span><span class="sl2 sl-soon"><span class="slic">📖</span> Revision Notes — Soon</span><span class="sl2 sl-soon"><span class="slic">🔬</span> Practical Book — Soon</span><span class="sl2 sl-soon"><span class="slic">🎯</span> Viva Prep — Soon</span><span class="sl2 sl-soon"><span class="slic">📚</span> Recommended Books — Soon</span></div></div></div>
+        <div class="sjc"><div class="sjh" onclick="tS(this)"><div class="sjl"><span class="sji">🦠</span><div><span class="sjn">Microbiology I <span class="cr-badge">3 CH</span><span class="pr-badge">2+1</span></span><span class="sjd">Sterilization, hospital infections, asepsis &amp; surgical site infections</span></div></div><span class="sjch">▼</span></div><div class="sjlk"><div class="slkg"><span class="sl2 sl-soon"><span class="slic">📝</span> MCQ Bank — Soon</span><span class="sl2 sl-soon"><span class="slic">📖</span> Revision Notes — Soon</span><span class="sl2 sl-soon"><span class="slic">🔬</span> Practical Book — Soon</span><span class="sl2 sl-soon"><span class="slic">🎯</span> Viva Prep — Soon</span><span class="sl2 sl-soon"><span class="slic">📚</span> Recommended Books — Soon</span></div></div></div>
+        <div class="sjc"><div class="sjh" onclick="tS(this)"><div class="sjl"><span class="sji">⚛️</span><div><span class="sjn">Medical Physics <span class="cr-badge">3 CH</span><span class="pr-badge">2+1</span></span><span class="sjd">Electrosurgery, diathermy, OT equipment physics &amp; patient safety</span></div></div><span class="sjch">▼</span></div><div class="sjlk"><div class="slkg"><span class="sl2 sl-soon"><span class="slic">📝</span> MCQ Bank — Soon</span><span class="sl2 sl-soon"><span class="slic">📖</span> Revision Notes — Soon</span><span class="sl2 sl-soon"><span class="slic">🔬</span> Practical Book — Soon</span><span class="sl2 sl-soon"><span class="slic">🎯</span> Viva Prep — Soon</span><span class="sl2 sl-soon"><span class="slic">📚</span> Recommended Books — Soon</span></div></div></div>
+        <div class="sjc"><div class="sjh" onclick="tS(this)"><div class="sjl"><span class="sji">🧠</span><div><span class="sjn">Behavioral Sciences II <span class="cr-badge">3 CH</span></span><span class="sjd">Patient psychology, teamwork in OT, communication &amp; stress management</span></div></div><span class="sjch">▼</span></div><div class="sjlk"><div class="slkg"><span class="sl2 sl-soon"><span class="slic">📝</span> MCQ Bank — Soon</span><span class="sl2 sl-soon"><span class="slic">📖</span> Revision Notes — Soon</span><span class="sl2 sl-soon"><span class="slic">🎯</span> Viva Prep — Soon</span><span class="sl2 sl-soon"><span class="slic">📚</span> Recommended Books — Soon</span></div></div></div>
+        <div class="cat-header"><div class="cat-line"></div><span class="cat-label">🎓 General Education</span><div class="cat-line"></div></div>
+        <div class="sjc"><div class="sjh" onclick="tS(this)"><div class="sjl"><span class="sji">🇵🇰</span><div><span class="sjn">Pakistan Studies <span class="cr-badge">2 CH</span></span><span class="sjd">History, geography, constitution &amp; national development</span></div></div><span class="sjch">▼</span></div><div class="sjlk"><div class="slkg"><span class="sl2 sl-soon"><span class="slic">📝</span> MCQ Bank — Soon</span><span class="sl2 sl-soon"><span class="slic">📖</span> Revision Notes — Soon</span><span class="sl2 sl-soon"><span class="slic">📚</span> Recommended Books — Soon</span></div></div></div>
+        <div class="sjc"><div class="sjh" onclick="tS(this)"><div class="sjl"><span class="sji">📝</span><div><span class="sjn">English Proficiency II <span class="cr-badge">2 CH</span></span><span class="sjd">Academic writing, reading comprehension &amp; research writing</span></div></div><span class="sjch">▼</span></div><div class="sjlk"><div class="slkg"><span class="sl2 sl-soon"><span class="slic">👂</span> Listening Exercises — Soon</span><span class="sl2 sl-soon"><span class="slic">✍️</span> Writing Practice — Soon</span><span class="sl2 sl-soon"><span class="slic">📖</span> Reading Comprehension — Soon</span><span class="sl2 sl-soon"><span class="slic">🗣️</span> Speaking Practice — Soon</span></div></div></div>
+        <div class="cat-header"><div class="cat-line"></div><span class="cat-label">📓 Reflective Learning</span><div class="cat-line"></div></div>
+        <div class="sjc"><div class="sjh" onclick="tS(this)"><div class="sjl"><span class="sji">📓</span><div><span class="sjn">PERL IV — Reflective Learning <span class="cr-badge">1 CH</span></span><span class="sjd">Advanced clinical placement journal, Gibbs Reflective Cycle</span></div></div><span class="sjch">▼</span></div><div class="sjlk"><div class="slkg"><span class="sl2 sl-soon"><span class="slic">📖</span> Gibbs Cycle Templates — Soon</span><span class="sl2 sl-soon"><span class="slic">📄</span> Sample Journal Entries — Soon</span><span class="sl2 sl-soon"><span class="slic">🎯</span> Portfolio Guide — Soon</span></div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CONTACT US -->
+<div class="contact-section" id="contact">
+  <div class="contact-inner">
+    <div class="contact-text">
+      <div class="sey reveal">Get in Touch</div>
+      <h2 style="color:white" class="reveal">Talk to the OTT Representative</h2>
+      <p class="reveal">Have a question about Operation Theater Technology resources, clinical rotations, or your semester? Reach out directly — we respond within 24 hours via WhatsApp or email.</p>
+      <p class="reveal" style="color:rgba(255,255,255,0.5);font-size:0.85rem">All guidance is completely free. No appointment needed — just message us.</p>
+    </div>
+    <div class="contact-card reveal rd1">
+      <div class="contact-avatar">FI</div>
+      <div class="contact-name">Faizan Ishaq</div>
+      <div class="contact-role">OTT Department Representative</div>
+      <div class="contact-dept">Semester Saviours · DGKMC, D.G. Khan</div>
+      <div class="contact-tags">
+        <span class="contact-tag">B.Sc. MLT · DGKMC</span>
+        <span class="contact-tag">Aspire Leaders Program</span>
+        <span class="contact-tag">Student Welfare Foundation</span>
+      </div>
+      <div class="contact-links">
+        <a href="https://wa.me/923340291818" target="_blank" class="contact-link">
+          <span class="contact-link-icon">💬</span>
+          <div><strong>WhatsApp</strong><span>+92 334 0291818 · Fastest response</span></div>
+        </a>
+        <a href="mailto:m.faizan.buziness@gmail.com" class="contact-link">
+          <span class="contact-link-icon">✉️</span>
+          <div><strong>Email</strong><span>m.faizan.buziness@gmail.com</span></div>
+        </a>
+        <a href="https://sites.google.com/view/faizanishaqmlt/home" target="_blank" class="contact-link">
+          <span class="contact-link-icon">🌐</span>
+          <div><strong>Portfolio</strong><span>sites.google.com/view/faizanishaqmlt</span></div>
+        </a>
+        <a href="../index.html" class="contact-link">
+          <span class="contact-link-icon">🎓</span>
+          <div><strong>Semester Saviours</strong><span>Back to main platform</span></div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="fi">
+    <div class="ft">
+      <div><div class="flo"><div class="fli">🩺</div>OTT · Operation Theater Technology</div><p class="fd">Free study material for Operation Theater Technology students in Pakistan. Part of Semester Saviours — built by students, for students.</p></div>
+      <div class="fc2"><h5>Resources</h5><ul><li><a href="#semesters">All Semesters</a></li><li><a href="#semesters">OT Practical Guides</a></li><li><a href="#semesters">MCQ Banks</a></li><li><a href="#semesters">Viva Guides</a></li></ul></div>
+      <div class="fc2"><h5>Contact</h5><ul><li><a href="https://wa.me/923340291818" target="_blank">💬 WhatsApp</a></li><li><a href="mailto:m.faizan.buziness@gmail.com">✉️ Email Faizan</a></li><li><a href="https://sites.google.com/view/faizanishaqmlt/home" target="_blank">🌐 Portfolio</a></li></ul></div>
+      <div class="fc2"><h5>Semester Saviours</h5><ul><li><a href="../index.html">🎓 Main Platform</a></li><li><a href="../labstem/index.html">🔬 MLT Department</a></li><li><a href="../index.html#support">❤️ Keep Us Free</a></li></ul></div>
+    </div>
+    <div class="fbo"><span>© 2026 Semester Saviours · OTT Department · Built by Faizan Ishaq · DGKMC, D.G. Khan</span><span>Free forever · No ads · No paywall</span></div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('navToggle').addEventListener('click',function(){
+  const l=document.getElementById('navLinks');l.classList.toggle('open');
+  this.textContent=l.classList.contains('open')?'✕':'☰';
+});
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',function(e){
+    const t=document.querySelector(this.getAttribute('href'));
+    if(t){e.preventDefault();window.scrollTo({top:t.offsetTop-80,behavior:'smooth'});document.getElementById('navLinks').classList.remove('open');document.getElementById('navToggle').textContent='☰';}
+  });
+});
+const cg=document.getElementById('cg');
+document.addEventListener('mousemove',e=>{cg.style.left=e.clientX+'px';cg.style.top=e.clientY+'px';cg.style.opacity='1';});
+document.addEventListener('mouseleave',()=>cg.style.opacity='0');
+const hp=document.getElementById('heroParticles');
+for(let i=0;i<28;i++){
+  const p=document.createElement('div');p.className='particle';
+  const c=Math.random()>0.5;
+  p.style.cssText=`left:${Math.random()*100}%;width:${2+Math.random()*5}px;height:${2+Math.random()*5}px;animation-duration:${6+Math.random()*12}s;animation-delay:${Math.random()*12}s;opacity:${0.3+Math.random()*0.5};background:${c?'rgba(94,206,206,0.7)':'rgba(5,150,105,0.7)'}`;
+  hp.appendChild(p);
+}
+const ot=document.getElementById('otCells');
+for(let i=0;i<18;i++){
+  const c=document.createElement('div');c.className='otc';
+  const sz=10+Math.random()*35;const isCirc=Math.random()>0.4;
+  c.style.cssText=`left:${Math.random()*100}%;width:${sz}px;height:${sz}px;border-radius:${isCirc?'50%':'4px'};animation-duration:${10+Math.random()*18}s;animation-delay:${Math.random()*16}s;border:${1+Math.random()*2}px solid ${Math.random()>0.5?'rgba(94,206,206,1)':'rgba(5,150,105,1)'}`;
+  ot.appendChild(c);
+}
+const ew=document.getElementById('ekgWrap');
+const ekgPositions=[25,55,80];
+ekgPositions.forEach((top,i)=>{
+  const line=document.createElement('div');
+  line.className='ekg-line';
+  line.style.cssText=`top:${top}%;animation-duration:${4+i*1.5}s;animation-delay:${i*1.2}s`;
+  ew.appendChild(line);
+});
+const reveals=document.querySelectorAll('.reveal');
+const ro=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');ro.unobserve(e.target);}});},{threshold:0.1});
+reveals.forEach(r=>ro.observe(r));
+function showSem(n,card){
+  const a=card.classList.contains('active');
+  document.querySelectorAll('.smc').forEach(c=>c.classList.remove('active'));
+  document.querySelectorAll('.smp').forEach(p=>p.classList.remove('visible'));
+  if(!a){card.classList.add('active');const p=document.getElementById('panel-'+n);if(p){p.classList.add('visible');setTimeout(()=>p.scrollIntoView({behavior:'smooth',block:'nearest'}),100);}}
+}
+function tS(h){const l=h.nextElementSibling;const o=h.classList.contains('open');h.classList.toggle('open',!o);l.classList.toggle('open',!o);}
+</script>
+</body>
+</html>
