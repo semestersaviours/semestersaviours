@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="theme-color" content="#0D1B2A">
 <title>UHS Semester Saviours — Free Allied Health Education</title>
-<meta name="description" content="UHS Semester Saviours — Pakistan's free allied health education platform. Free notes, MCQs, practical books and viva prep for MLT, MIT, OTT and slp students.">
+<meta name="description" content="UHS Semester Saviours — Pakistan's free allied health education platform. Free notes, MCQs, practical books and viva prep for MLT, MIT, OTT and SLP students.">
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -18,7 +18,7 @@
   /* OTT — Surgical Green */
   --scrub:#2D9596;--scrub-light:#48B4B5;--scrub-pale:#E0F7F7;--scrub-dark:#1D6E6F;
   /* Speech & Language Pathology — warm amber */
-  --slp:#C2410C;--slp-light:#F97316;--slp-pale:#FFEDD5;--slp-dark:#9A3412;
+  --SLP:#C2410C;--SLP-light:#F97316;--SLP-pale:#FFEDD5;--SLP-dark:#9A3412;
   --navy:#0D1B2A;--navy-mid:#1B2E42;--navy-light:#2E4A64;--navy-pale:#E8EEF4;
   --cream:#FDF3DC;--cream-dark:#F5E8C4;--cream-mid:#EDD99A;
   --white:#FFFFFF;--ink:#0D1B2A;--muted:#4A5E72;--surface:#FDF3DC;
@@ -141,7 +141,7 @@ nav.scrolled .logo-img{width:42px;height:42px}
 .dept-card:hover{transform:translateY(-10px) scale(1.025)}
 .dept-card:hover::before{opacity:1}
 .dept-card:hover::after{border-color:rgba(201,161,92,0.4)}
-/* Department accent colors — MLT (gram-stain purple/violet), MIT (deep blue), OTT (surgical green), slp (amber) */
+/* Department accent colors — MLT (gram-stain purple/violet), MIT (deep blue), OTT (surgical green), SLP (amber) */
 .dept-mlt::before{background:linear-gradient(160deg,rgba(107,33,168,0.28),rgba(190,24,93,0.10))}
 .dept-mlt:hover{box-shadow:0 24px 60px rgba(107,33,168,0.35)}
 .dept-mlt:hover::after{border-color:rgba(190,24,93,0.55)}
@@ -163,12 +163,12 @@ nav.scrolled .logo-img{width:42px;height:42px}
 .dept-ott .dept-tag-live::before{color:#2D9596}
 .dept-ott:hover .dept-arrow{color:#48B4B5}
 
-.dept-slp::before{background:linear-gradient(160deg,rgba(194,65,12,0.28),rgba(249,115,22,0.10))}
-.dept-slp:hover{box-shadow:0 24px 60px rgba(194,65,12,0.35)}
-.dept-slp:hover::after{border-color:rgba(249,115,22,0.55)}
-.dept-slp .dept-tag-live{background:rgba(194,65,12,0.2);border-color:rgba(249,115,22,0.4);color:#FED7AA}
-.dept-slp .dept-tag-live::before{color:#C2410C}
-.dept-slp:hover .dept-arrow{color:#F97316}
+.dept-SLP::before{background:linear-gradient(160deg,rgba(194,65,12,0.28),rgba(249,115,22,0.10))}
+.dept-SLP:hover{box-shadow:0 24px 60px rgba(194,65,12,0.35)}
+.dept-SLP:hover::after{border-color:rgba(249,115,22,0.55)}
+.dept-SLP .dept-tag-live{background:rgba(194,65,12,0.2);border-color:rgba(249,115,22,0.4);color:#FED7AA}
+.dept-SLP .dept-tag-live::before{color:#C2410C}
+.dept-SLP:hover .dept-arrow{color:#F97316}
 .dept-card-inner{position:relative;z-index:1}
 .dept-emoji{font-size:2.75rem;display:block;margin-bottom:0.85rem;animation:floatIcon 3s ease-in-out infinite;filter:drop-shadow(0 4px 8px rgba(0,0,0,0.3))}
 .dept-card:nth-child(2) .dept-emoji{animation-delay:0.6s}
@@ -241,7 +241,7 @@ nav.scrolled .logo-img{width:42px;height:42px}
 .dept-visual{display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;min-height:220px;background:linear-gradient(135deg,var(--cream) 0%,var(--cream-dark) 100%)}
 .dept-visual-emoji{font-size:5.5rem;animation:floatIcon 4s ease-in-out infinite;user-select:none;filter:drop-shadow(0 8px 20px rgba(13,27,42,0.15))}
 
-/* Deep-dive department accents — MLT purple/violet, MIT blue, OTT green, slp amber */
+/* Deep-dive department accents — MLT purple/violet, MIT blue, OTT green, SLP amber */
 .dept-card-full-mlt::before{background:linear-gradient(180deg,var(--lab-pink),var(--lab))}
 .dept-card-full-mlt .dept-badge-live{background:var(--lab-pale);color:var(--lab-dark)}
 .dept-card-full-mlt .dept-feature-icon{background:var(--lab-pale)}
@@ -265,13 +265,13 @@ nav.scrolled .logo-img{width:42px;height:42px}
 .dept-card-full-ott .dept-cta:hover{background:var(--scrub-dark);box-shadow:0 6px 20px rgba(45,149,150,0.38)}
 .dept-card-full-ott .dept-visual{background:linear-gradient(135deg,var(--scrub-pale) 0%,#D3F0F0 100%)}
 
-.dept-card-full-slp::before{background:linear-gradient(180deg,var(--slp-light),var(--slp))}
-.dept-card-full-slp .dept-badge-live{background:var(--slp-pale);color:var(--slp-dark)}
-.dept-card-full-slp .dept-badge{background:var(--slp-pale);color:var(--slp-dark)}
-.dept-card-full-slp .dept-feature-icon{background:var(--slp-pale)}
-.dept-card-full-slp .dept-cta{background:var(--slp);box-shadow:0 4px 14px rgba(194,65,12,0.28)}
-.dept-card-full-slp .dept-cta:hover{background:var(--slp-dark);box-shadow:0 6px 20px rgba(194,65,12,0.38)}
-.dept-card-full-slp .dept-visual{background:linear-gradient(135deg,var(--slp-pale) 0%,#FFE0C2 100%)}
+.dept-card-full-SLP::before{background:linear-gradient(180deg,var(--SLP-light),var(--SLP))}
+.dept-card-full-SLP .dept-badge-live{background:var(--SLP-pale);color:var(--SLP-dark)}
+.dept-card-full-SLP .dept-badge{background:var(--SLP-pale);color:var(--SLP-dark)}
+.dept-card-full-SLP .dept-feature-icon{background:var(--SLP-pale)}
+.dept-card-full-SLP .dept-cta{background:var(--SLP);box-shadow:0 4px 14px rgba(194,65,12,0.28)}
+.dept-card-full-SLP .dept-cta:hover{background:var(--SLP-dark);box-shadow:0 6px 20px rgba(194,65,12,0.38)}
+.dept-card-full-SLP .dept-visual{background:linear-gradient(135deg,var(--SLP-pale) 0%,#FFE0C2 100%)}
 
 /* SUPPORT SECTION */
 .support-section{background:var(--navy);padding:5rem 2.5rem;position:relative;overflow:hidden}
@@ -336,7 +336,7 @@ footer::before{content:'';position:absolute;inset:0;background-image:radial-grad
 .footer-badge-mlt:hover{background:rgba(107,33,168,0.28);border-color:rgba(190,24,93,0.5)}
 .footer-badge-radio:hover{background:rgba(26,86,219,0.28);border-color:rgba(59,130,246,0.5)}
 .footer-badge-ott:hover{background:rgba(45,149,150,0.28);border-color:rgba(72,180,181,0.5)}
-.footer-badge-slp:hover{background:rgba(194,65,12,0.28);border-color:rgba(249,115,22,0.5)}
+.footer-badge-SLP:hover{background:rgba(194,65,12,0.28);border-color:rgba(249,115,22,0.5)}
 .footer-col h5{font-size:0.7rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:rgba(253,243,220,0.32);margin-bottom:1.1rem}
 .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:0.65rem}
 .footer-col a{text-decoration:none;font-size:0.85rem;color:rgba(253,243,220,0.45);transition:color 0.2s,padding-left 0.2s var(--ease)}
@@ -487,10 +487,10 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offse
           <span class="dept-arrow">→</span>
         </div>
       </a>
-      <a href="slp/index.html" class="dept-card dept-slp">
+      <a href="SLP/index.html" class="dept-card dept-SLP">
         <div class="dept-card-inner">
           <span class="dept-emoji">🗣️</span>
-          <span class="dept-abbr">slp</span>
+          <span class="dept-abbr">SLP</span>
           <span class="dept-name">Speech &amp; Language Pathology</span>
           <span class="dept-tag-live">Live Now</span>
           <span class="dept-arrow">→</span>
@@ -591,18 +591,18 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offse
         <div class="dept-visual"><span class="dept-visual-emoji">🩺</span></div>
       </div>
 
-      <div class="dept-card-full dept-card-full-slp reveal">
+      <div class="dept-card-full dept-card-full-SLP reveal">
         <div class="dept-info">
           <div class="dept-badge dept-badge-live">🗣️ Live Now</div>
           <div class="dept-title">Speech &amp; Language Pathology</div>
-          <div class="dept-abbr-full">slp · B.Sc. slp · UHS</div>
+          <div class="dept-abbr-full">SLP · B.Sc. SLP · UHS</div>
           <div class="dept-features">
             <div class="dept-feature"><div class="dept-feature-icon">✅</div>Articulation, phonological &amp; language disorder notes</div>
             <div class="dept-feature"><div class="dept-feature-icon">✅</div>Voice &amp; fluency disorder MCQs</div>
             <div class="dept-feature"><div class="dept-feature-icon">✅</div>Dysphagia assessment &amp; AAC guides</div>
             <div class="dept-feature"><div class="dept-feature-icon">✅</div>Case-based viva prep &amp; screening protocols</div>
           </div>
-          <a href="slp/index.html" class="dept-cta">Enter slp →</a>
+          <a href="SLP/index.html" class="dept-cta">Enter SLP →</a>
         </div>
         <div class="dept-visual"><span class="dept-visual-emoji">🗣️</span></div>
       </div>
@@ -659,7 +659,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offse
           <div class="dept-list-item">🔬 MLT — Medical Laboratory Technology</div>
           <div class="dept-list-item">🩻 MIT — Medical Imaging Technology</div>
           <div class="dept-list-item">🩺 OTT — Operation Theater Technology</div>
-          <div class="dept-list-item">🗣️ slp — Speech &amp; Language Pathology</div>
+          <div class="dept-list-item">🗣️ SLP — Speech &amp; Language Pathology</div>
         </div>
       </div>
     </div>
@@ -712,7 +712,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offse
           <span class="footer-badge footer-badge-mlt">🔬 MLT</span>
           <span class="footer-badge footer-badge-radio">🩻 MIT</span>
           <span class="footer-badge footer-badge-ott">🩺 OTT</span>
-          <span class="footer-badge footer-badge-slp">🗣️ slp</span>
+          <span class="footer-badge footer-badge-SLP">🗣️ SLP</span>
         </div>
       </div>
       <div class="footer-col">
@@ -721,7 +721,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offse
           <li><a href="MLT/index.html">🔬 MLT</a></li>
           <li><a href="MIT/index.html">🩻 MIT</a></li>
           <li><a href="OTT/index.html">🩺 OTT</a></li>
-          <li><a href="SLP/index.html">🗣️ slp</a></li>
+          <li><a href="SLP/index.html">🗣️ SLP</a></li>
         </ul>
       </div>
       <div class="footer-col">
