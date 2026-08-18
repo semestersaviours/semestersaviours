@@ -225,6 +225,22 @@ nav{position:sticky;top:0;z-index:200;background:rgba(255,250,243,0.93);backdrop
 @keyframes bookBounce{0%,100%{transform:rotate(0deg) scale(1)}25%{transform:rotate(-8deg) scale(1.1)}75%{transform:rotate(8deg) scale(1.1)}}
 .sublink-books:hover .sublink-icon{animation:none;transform:scale(1.25)}
 .sublink-soon{background:var(--surface);color:var(--muted);border-color:var(--border);cursor:default;opacity:0.65}
+.sublink-past{background:#E0F2FE;color:#0369A1;border-color:rgba(3,105,161,0.18)}
+.sublink-past:hover{background:#BAE6FD;border-color:#38BDF8;transform:translateY(-1px);box-shadow:0 3px 10px rgba(3,105,161,0.15)}
+/* Nested sub-subject module (IDC-1 style) */
+.module-note{display:flex;align-items:center;gap:8px;font-size:0.76rem;color:var(--slp);font-weight:600;padding:0 0.25rem 0.6rem;letter-spacing:0.02em}
+.subsubjects{display:flex;flex-direction:column;gap:0.5rem}
+.subsub-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius-sm);overflow:hidden}
+.subsub-header{display:flex;align-items:center;justify-content:space-between;padding:0.8rem 1rem;cursor:pointer;transition:background 0.2s;user-select:none}
+.subsub-header:hover{background:var(--slp-pale)}
+.subsub-header.open{background:var(--slp-pale);border-bottom:1px solid var(--border)}
+.subsub-left{display:flex;align-items:center;gap:10px}
+.subsub-icon{font-size:17px;flex-shrink:0}
+.subsub-name{font-size:0.86rem;font-weight:600;color:var(--ink)}
+.subsub-chevron{font-size:0.7rem;color:var(--muted);transition:transform 0.25s}
+.subsub-header.open .subsub-chevron{transform:rotate(180deg)}
+.subsub-links{display:none;padding:0.65rem 0.85rem 0.75rem;background:var(--surface)}
+.subsub-links.open{display:block;animation:fadeInUp 0.2s ease}
 
 /* ── MENTORSHIP ── */
 .mentorship-wrap{display:grid;grid-template-columns:360px 1fr;gap:2.5rem;align-items:start}
@@ -433,15 +449,155 @@ footer{background:var(--ink);color:rgba(255,255,255,0.55);padding:4rem 2.5rem 2.
     <div class="section-title reveal">Pick your semester</div>
     <p class="section-sub reveal">4 semesters of B.Sc. SLP. Resources are being built out semester by semester — check back soon, or reach out for guidance in the meantime.</p>
     <div class="sem-grid reveal" style="grid-template-columns:repeat(4,1fr);">
-      <div class="sem-card" onclick="showSem(1,this)"><span class="sem-num">1</span><div class="sem-lbl">Semester</div><div class="sem-subjects">Coming Soon</div></div>
+      <div class="sem-card" onclick="showSem(1,this)"><div class="new-badge">LIVE</div><span class="sem-num">1</span><div class="sem-lbl">Semester</div><div class="sem-subjects">Foundations · Gen Ed</div></div>
       <div class="sem-card" onclick="showSem(2,this)"><span class="sem-num">2</span><div class="sem-lbl">Semester</div><div class="sem-subjects">Coming Soon</div></div>
       <div class="sem-card" onclick="showSem(3,this)"><span class="sem-num">3</span><div class="sem-lbl">Semester</div><div class="sem-subjects">Coming Soon</div></div>
       <div class="sem-card" onclick="showSem(4,this)"><span class="sem-num">4</span><div class="sem-lbl">Semester</div><div class="sem-subjects">Coming Soon</div></div>
     </div>
 
     <div class="sem-panel" id="panel-1">
-      <div class="sem-panel-header"><div class="sem-panel-title">Semester 1 — Coming Soon</div></div>
-      <p style="color:var(--muted);font-size:0.9rem;">Resources are being prepared. Reach out to the Semester Saviours team for guidance in the meantime.</p>
+      <div class="sem-panel-header">
+        <div><div class="sem-panel-title">Semester 1 Resources</div><p style="font-size:0.85rem;color:var(--muted);margin-top:4px;">Foundation Year · UHS B.Sc. SLP</p></div>
+        <span class="tag-green">All Free</span>
+      </div>
+      <div class="resource-list">
+
+        <div class="subject-card">
+          <div class="subject-header" onclick="toggleSubject(this)">
+            <div class="subject-left"><span class="subject-icon">📝</span><div><span class="subject-name">Functional English <span style="font-weight:400;color:var(--muted)">(03 0 03)</span></span><span class="subject-desc">Grammar, communication, academic writing basics</span></div></div>
+            <span class="subject-chevron">▼</span>
+          </div>
+          <div class="subject-links"><div class="sublink-grid">
+            <a href="YOUR_LINK_FE_MCQ" target="_blank" class="sublink sublink-mcq"><span class="sublink-icon">📝</span> MCQ Bank</a>
+            <a href="YOUR_LINK_FE_PAST" target="_blank" class="sublink sublink-past"><span class="sublink-icon">📄</span> Past Paper</a>
+            <a href="YOUR_LINK_FE_BOOKS" target="_blank" class="sublink sublink-books"><span class="sublink-icon">📚</span> Books &amp; Notes</a>
+          </div></div>
+        </div>
+
+        <div class="subject-card">
+          <div class="subject-header" onclick="toggleSubject(this)">
+            <div class="subject-left"><span class="subject-icon">🔢</span><div><span class="subject-name">GEQR — Quantitative Reasoning-I <span style="font-weight:400;color:var(--muted)">(03 0 03)</span></span><span class="subject-desc">Mathematical reasoning, problem solving, logic</span></div></div>
+            <span class="subject-chevron">▼</span>
+          </div>
+          <div class="subject-links"><div class="sublink-grid">
+            <a href="YOUR_LINK_GEQR_MCQ" target="_blank" class="sublink sublink-mcq"><span class="sublink-icon">📝</span> MCQ Bank</a>
+            <a href="YOUR_LINK_GEQR_PAST" target="_blank" class="sublink sublink-past"><span class="sublink-icon">📄</span> Past Paper</a>
+            <a href="YOUR_LINK_GEQR_BOOKS" target="_blank" class="sublink sublink-books"><span class="sublink-icon">📚</span> Books &amp; Notes</a>
+          </div></div>
+        </div>
+
+        <div class="subject-card">
+          <div class="subject-header" onclick="toggleSubject(this)">
+            <div class="subject-left"><span class="subject-icon">🌱</span><div><span class="subject-name">GENS — Natural Sciences <span style="font-weight:400;color:var(--muted)">(02 1 03)</span></span><span class="subject-desc">General science concepts with a practical component</span></div></div>
+            <span class="subject-chevron">▼</span>
+          </div>
+          <div class="subject-links"><div class="sublink-grid">
+            <a href="YOUR_LINK_GENS_MCQ" target="_blank" class="sublink sublink-mcq"><span class="sublink-icon">📝</span> MCQ Bank</a>
+            <a href="YOUR_LINK_GENS_PAST" target="_blank" class="sublink sublink-past"><span class="sublink-icon">📄</span> Past Paper</a>
+            <a href="YOUR_LINK_GENS_PRACTICAL" target="_blank" class="sublink sublink-practical"><span class="sublink-icon">🔬</span> Practical</a>
+            <a href="YOUR_LINK_GENS_BOOKS" target="_blank" class="sublink sublink-books"><span class="sublink-icon">📚</span> Books &amp; Notes</a>
+          </div></div>
+        </div>
+
+        <div class="subject-card">
+          <div class="subject-header" onclick="toggleSubject(this)">
+            <div class="subject-left"><span class="subject-icon">🎨</span><div><span class="subject-name">GEAH — Arts and Humanities <span style="font-weight:400;color:var(--muted)">(02 0 02)</span></span><span class="subject-desc">Humanities perspective, critical &amp; creative thinking</span></div></div>
+            <span class="subject-chevron">▼</span>
+          </div>
+          <div class="subject-links"><div class="sublink-grid">
+            <a href="YOUR_LINK_GEAH_MCQ" target="_blank" class="sublink sublink-mcq"><span class="sublink-icon">📝</span> MCQ Bank</a>
+            <a href="YOUR_LINK_GEAH_PAST" target="_blank" class="sublink sublink-past"><span class="sublink-icon">📄</span> Past Paper</a>
+            <a href="YOUR_LINK_GEAH_BOOKS" target="_blank" class="sublink sublink-books"><span class="sublink-icon">📚</span> Books &amp; Notes</a>
+          </div></div>
+        </div>
+
+        <div class="subject-card">
+          <div class="subject-header" onclick="toggleSubject(this)">
+            <div class="subject-left"><span class="subject-icon">🇵🇰</span><div><span class="subject-name">GEICP — Ideology and Constitution of Pakistan <span style="font-weight:400;color:var(--muted)">(02 0 02)</span></span><span class="subject-desc">National ideology, constitutional history &amp; structure</span></div></div>
+            <span class="subject-chevron">▼</span>
+          </div>
+          <div class="subject-links"><div class="sublink-grid">
+            <a href="YOUR_LINK_GEICP_MCQ" target="_blank" class="sublink sublink-mcq"><span class="sublink-icon">📝</span> MCQ Bank</a>
+            <a href="YOUR_LINK_GEICP_PAST" target="_blank" class="sublink sublink-past"><span class="sublink-icon">📄</span> Past Paper</a>
+            <a href="YOUR_LINK_GEICP_BOOKS" target="_blank" class="sublink sublink-books"><span class="sublink-icon">📚</span> Books &amp; Notes</a>
+          </div></div>
+        </div>
+
+        <div class="subject-card">
+          <div class="subject-header" onclick="toggleSubject(this)">
+            <div class="subject-left"><span class="subject-icon">☪️</span><div><span class="subject-name">Islamic Studies / Ethics <span style="font-weight:400;color:var(--muted)">(02 0 02)</span></span><span class="subject-desc">Islamic teachings and ethics, or comparative ethics for non-Muslim students</span></div></div>
+            <span class="subject-chevron">▼</span>
+          </div>
+          <div class="subject-links"><div class="sublink-grid">
+            <a href="YOUR_LINK_ISL_MCQ" target="_blank" class="sublink sublink-mcq"><span class="sublink-icon">📝</span> MCQ Bank</a>
+            <a href="YOUR_LINK_ISL_PAST" target="_blank" class="sublink sublink-past"><span class="sublink-icon">📄</span> Past Paper</a>
+            <a href="YOUR_LINK_ISL_BOOKS" target="_blank" class="sublink sublink-books"><span class="sublink-icon">📚</span> Books &amp; Notes</a>
+          </div></div>
+        </div>
+
+        <!-- IDC-1 — nested module with 3 sub-subjects -->
+        <div class="subject-card">
+          <div class="subject-header" onclick="toggleSubject(this)">
+            <div class="subject-left"><span class="subject-icon">🧬</span><div><span class="subject-name">IDC-1 — Basic Science Foundation Module <span style="font-weight:400;color:var(--muted)">(03 0 03)</span></span><span class="subject-desc">Biochemistry, Anatomy &amp; Physiology combined module</span></div></div>
+            <span class="subject-chevron">▼</span>
+          </div>
+          <div class="subject-links">
+            <div class="module-note">📦 This module contains 3 subjects — click each to view its resources</div>
+            <div class="subsubjects">
+
+              <div class="subsub-card">
+                <div class="subsub-header" onclick="toggleSubject(this)">
+                  <div class="subsub-left"><span class="subsub-icon">⚗️</span><span class="subsub-name">Biochemistry</span></div>
+                  <span class="subsub-chevron">▼</span>
+                </div>
+                <div class="subsub-links"><div class="sublink-grid">
+                  <a href="YOUR_LINK_BIOCHEM_MCQ" target="_blank" class="sublink sublink-mcq"><span class="sublink-icon">📝</span> MCQ Bank</a>
+                  <a href="YOUR_LINK_BIOCHEM_PAST" target="_blank" class="sublink sublink-past"><span class="sublink-icon">📄</span> Past Paper</a>
+                  <a href="YOUR_LINK_BIOCHEM_BOOKS" target="_blank" class="sublink sublink-books"><span class="sublink-icon">📚</span> Books &amp; Notes</a>
+                </div></div>
+              </div>
+
+              <div class="subsub-card">
+                <div class="subsub-header" onclick="toggleSubject(this)">
+                  <div class="subsub-left"><span class="subsub-icon">🦴</span><span class="subsub-name">Anatomy</span></div>
+                  <span class="subsub-chevron">▼</span>
+                </div>
+                <div class="subsub-links"><div class="sublink-grid">
+                  <a href="YOUR_LINK_ANATOMY_MCQ" target="_blank" class="sublink sublink-mcq"><span class="sublink-icon">📝</span> MCQ Bank</a>
+                  <a href="YOUR_LINK_ANATOMY_PAST" target="_blank" class="sublink sublink-past"><span class="sublink-icon">📄</span> Past Paper</a>
+                  <a href="YOUR_LINK_ANATOMY_BOOKS" target="_blank" class="sublink sublink-books"><span class="sublink-icon">📚</span> Books &amp; Notes</a>
+                </div></div>
+              </div>
+
+              <div class="subsub-card">
+                <div class="subsub-header" onclick="toggleSubject(this)">
+                  <div class="subsub-left"><span class="subsub-icon">⚡</span><span class="subsub-name">Physiology</span></div>
+                  <span class="subsub-chevron">▼</span>
+                </div>
+                <div class="subsub-links"><div class="sublink-grid">
+                  <a href="YOUR_LINK_PHYSIO_MCQ" target="_blank" class="sublink sublink-mcq"><span class="sublink-icon">📝</span> MCQ Bank</a>
+                  <a href="YOUR_LINK_PHYSIO_PAST" target="_blank" class="sublink sublink-past"><span class="sublink-icon">📄</span> Past Paper</a>
+                  <a href="YOUR_LINK_PHYSIO_BOOKS" target="_blank" class="sublink sublink-books"><span class="sublink-icon">📚</span> Books &amp; Notes</a>
+                </div></div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="subject-card">
+          <div class="subject-header" onclick="toggleSubject(this)">
+            <div class="subject-left"><span class="subject-icon">📓</span><div><span class="subject-name">PERL-I <span style="font-weight:400;color:var(--muted)">(01 0)</span></span><span class="subject-desc">Introductory reflective learning &amp; portfolio basics</span></div></div>
+            <span class="subject-chevron">▼</span>
+          </div>
+          <div class="subject-links"><div class="sublink-grid">
+            <a href="YOUR_LINK_PERL1_MCQ" target="_blank" class="sublink sublink-mcq"><span class="sublink-icon">📝</span> MCQ Bank</a>
+            <a href="YOUR_LINK_PERL1_PAST" target="_blank" class="sublink sublink-past"><span class="sublink-icon">📄</span> Past Paper</a>
+            <a href="YOUR_LINK_PERL1_BOOKS" target="_blank" class="sublink sublink-books"><span class="sublink-icon">📚</span> Books &amp; Notes</a>
+          </div></div>
+        </div>
+
+      </div>
     </div>
     <div class="sem-panel" id="panel-2">
       <div class="sem-panel-header"><div class="sem-panel-title">Semester 2 — Coming Soon</div></div>
