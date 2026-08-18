@@ -197,6 +197,22 @@ nav{position:sticky;top:0;z-index:200;background:rgba(246,249,255,0.93);backdrop
 @keyframes bb{0%,100%{transform:rotate(0deg) scale(1)}25%{transform:rotate(-8deg) scale(1.1)}75%{transform:rotate(8deg) scale(1.1)}}
 .sl-book:hover .slic{animation:none;transform:scale(1.25)}
 .sl-soon{background:var(--surface);color:var(--muted);border-color:var(--border);cursor:default;opacity:0.65}
+.sl-past{background:#E0F2FE;color:#0369A1;border-color:rgba(3,105,161,0.18)}
+.sl-past:hover{background:#BAE6FD;border-color:#38BDF8;transform:translateY(-1px)}
+/* Nested sub-subject module (IDC-1 style) */
+.module-note{display:flex;align-items:center;gap:8px;font-size:0.76rem;color:var(--rb);font-weight:600;padding:0 0.25rem 0.6rem;letter-spacing:0.02em}
+.subsubjects{display:flex;flex-direction:column;gap:0.5rem}
+.subsub-card{background:var(--white);border:1px solid var(--border);border-radius:var(--rmd);overflow:hidden}
+.subsub-header{display:flex;align-items:center;justify-content:space-between;padding:0.8rem 1rem;cursor:pointer;transition:background 0.2s;user-select:none}
+.subsub-header:hover{background:var(--rbp)}
+.subsub-header.open{background:var(--rbp);border-bottom:1px solid var(--border)}
+.subsub-left{display:flex;align-items:center;gap:10px}
+.subsub-icon{font-size:17px;flex-shrink:0}
+.subsub-name{font-size:0.86rem;font-weight:600;color:var(--ink)}
+.subsub-chevron{font-size:0.7rem;color:var(--muted);transition:transform 0.25s}
+.subsub-header.open .subsub-chevron{transform:rotate(180deg)}
+.subsub-links{display:none;padding:0.65rem 0.85rem 0.75rem;background:var(--surface)}
+.subsub-links.open{display:block}
 
 /* CONTACT SECTION */
 .contact-section{background:linear-gradient(135deg,var(--rbdp),var(--rbd));padding:5rem 2.5rem;position:relative;overflow:hidden}
@@ -299,8 +315,8 @@ footer{background:var(--ink);color:rgba(255,255,255,0.55);padding:4rem 2.5rem 2.
     <span class="hero-abbr">MIT · B.Sc. Medical Imaging Technology</span>
     <p class="hsub">Free semester-wise study material for Medical Imaging Technology students across Pakistan. Notes, MCQ banks, practical books, viva prep — all free, always.</p>
     <div class="hsts">
-      <div><span class="hsn">2</span><span class="hsl">Semesters Mapped</span></div>
-      <div><span class="hsn">16</span><span class="hsl">Subjects</span></div>
+      <div><span class="hsn">3</span><span class="hsl">Semesters Mapped</span></div>
+      <div><span class="hsn">24</span><span class="hsl">Subjects</span></div>
       <div><span class="hsn">100%</span><span class="hsl">Free Forever</span></div>
       <div><span class="hsn">UHS</span><span class="hsl">Aligned</span></div>
     </div>
@@ -320,7 +336,7 @@ footer{background:var(--ink);color:rgba(255,255,255,0.55);padding:4rem 2.5rem 2.
 <!-- STATS BAND -->
 <div class="sb2">
   <div class="sbi">
-    <div class="bst reveal"><span class="bsn">16</span><span class="bsl">Subjects Mapped</span></div>
+    <div class="bst reveal"><span class="bsn">24</span><span class="bsl">Subjects Mapped</span></div>
     <div class="bst reveal rd1"><span class="bsn">2</span><span class="bsl">Semesters Planned</span></div>
     <div class="bst reveal rd2"><span class="bsn">PKR 0</span><span class="bsl">Cost to Students</span></div>
     <div class="bst reveal rd3"><span class="bsn">∞</span><span class="bsl">Knowledge</span></div>
@@ -335,7 +351,7 @@ footer{background:var(--ink);color:rgba(255,255,255,0.55);padding:4rem 2.5rem 2.
       <div class="sti reveal">Four steps to study smarter</div>
     </div>
     <div class="sgr">
-      <div class="stc reveal"><div class="stn">1</div><h4>Pick your semester</h4><p>Browse the UHS B.Sc. MIT curriculum — Semester 3 &amp; 4 fully mapped and ready.</p></div>
+      <div class="stc reveal"><div class="stn">1</div><h4>Pick your semester</h4><p>Browse the UHS B.Sc. MIT curriculum — Semester 1 is live now, Semester 3 &amp; 4 fully mapped and ready.</p></div>
       <div class="stc reveal rd1"><div class="stn">2</div><h4>Access for free</h4><p>Click any resource to open instantly — no login, no paywall, no catch, ever.</p></div>
       <div class="stc reveal rd2"><div class="stn">3</div><h4>Need help?</h4><p>Contact the MIT representative directly via WhatsApp or email — response within 24 hours.</p></div>
       <div class="stc reveal rd3"><div class="stn">4</div><h4>Support the platform</h4><p>Visit Semester Saviours main page to support the entire platform and keep it free.</p></div>
@@ -369,25 +385,104 @@ footer{background:var(--ink);color:rgba(255,255,255,0.55);padding:4rem 2.5rem 2.
   <div class="container">
     <div class="sey reveal">Browse by semester</div>
     <div class="sti reveal">Pick your semester</div>
-    <p class="ssu reveal">Semesters 3 &amp; 4 of B.Sc. Medical Imaging Technology fully mapped. All subjects structured — resources coming very soon.</p>
+    <p class="ssu reveal">Semester 1 is fully live. Semesters 3 &amp; 4 of B.Sc. Medical Imaging Technology are mapped, with resources coming very soon.</p>
 
     <div class="cs-banner reveal">
       <div class="cs-icon">🩻</div>
       <div class="cs-text">
-        <h3>Resources are being prepared!</h3>
-        <p>Medical Imaging Technology content is actively being developed. All subjects are mapped and structured — notes, MCQ banks, practical books, and viva guides are coming very soon. Contact us in the meantime for any guidance.</p>
+        <h3>Semester 1 is live — more on the way!</h3>
+        <p>Semester 1 resources (MCQs, past papers, books &amp; notes) are ready to explore. Semester 3 &amp; 4 content is mapped and structured, and is being actively developed. Contact us in the meantime for any guidance.</p>
       </div>
-      <div class="cs-badge">⏳ Coming Soon</div>
+      <div class="cs-badge">⏳ Sem 3 &amp; 4 Coming Soon</div>
     </div>
 
     <div class="smg reveal" style="grid-template-columns:repeat(4,1fr)">
-      <div class="smc" onclick="showSem(1,this)"><span class="smn">1</span><div class="sml">Semester</div><div class="sms">Coming Soon</div></div>
+      <div class="smc" onclick="showSem(1,this)"><div class="nb">LIVE</div><span class="smn">1</span><div class="sml">Semester</div><div class="sms">Foundations · Gen Ed</div></div>
       <div class="smc" onclick="showSem(2,this)"><span class="smn">2</span><div class="sml">Semester</div><div class="sms">Coming Soon</div></div>
       <div class="smc" onclick="showSem(3,this)"><div class="nb">MAPPED</div><span class="smn">3</span><div class="sml">Semester</div><div class="sms">GIA-I · GR-I · IDGP · ICT</div></div>
       <div class="smc" onclick="showSem(4,this)"><div class="nb">MAPPED</div><span class="smn">4</span><div class="sml">Semester</div><div class="sms">GIA-II · GR-II · RST · PCD</div></div>
     </div>
 
-    <div class="smp" id="panel-1"><div class="smph"><div class="smpt">Semester 1 — Coming Soon</div></div><p style="color:var(--muted);font-size:0.9rem">Resources are being prepared. Contact us for guidance in the meantime.</p></div>
+    <div class="smp" id="panel-1">
+      <div class="smph">
+        <div><div class="smpt">Semester 1 — Medical Imaging Technology</div><p style="font-size:0.85rem;color:var(--muted);margin-top:4px">Foundation Year · UHS B.Sc. MIT</p></div>
+        <span class="tcs" style="background:var(--rbp);color:var(--rb);border-color:rgba(26,86,219,0.2)">All Free</span>
+      </div>
+      <div class="rl">
+
+        <div class="sjc"><div class="sjh" onclick="tS(this)"><div class="sjl"><span class="sji">📝</span><div><span class="sjn">Functional English <span class="cr-badge">3 CH</span></span><span class="sjd">Grammar, communication, academic writing basics</span></div></div><span class="sjch">▼</span></div><div class="sjlk"><div class="slkg">
+          <a href="YOUR_LINK_FE_MCQ" target="_blank" class="sl2 sl-mcq"><span class="slic">📝</span> MCQ Bank</a>
+          <a href="YOUR_LINK_FE_PAST" target="_blank" class="sl2 sl-past"><span class="slic">📄</span> Past Paper</a>
+          <a href="YOUR_LINK_FE_BOOKS" target="_blank" class="sl2 sl-book"><span class="slic">📚</span> Books &amp; Notes</a>
+        </div></div></div>
+
+        <div class="sjc"><div class="sjh" onclick="tS(this)"><div class="sjl"><span class="sji">🔢</span><div><span class="sjn">GEQR — Quantitative Reasoning-I <span class="cr-badge">3 CH</span></span><span class="sjd">Mathematical reasoning, problem solving, logic</span></div></div><span class="sjch">▼</span></div><div class="sjlk"><div class="slkg">
+          <a href="YOUR_LINK_GEQR_MCQ" target="_blank" class="sl2 sl-mcq"><span class="slic">📝</span> MCQ Bank</a>
+          <a href="YOUR_LINK_GEQR_PAST" target="_blank" class="sl2 sl-past"><span class="slic">📄</span> Past Paper</a>
+          <a href="YOUR_LINK_GEQR_BOOKS" target="_blank" class="sl2 sl-book"><span class="slic">📚</span> Books &amp; Notes</a>
+        </div></div></div>
+
+        <div class="sjc"><div class="sjh" onclick="tS(this)"><div class="sjl"><span class="sji">🌱</span><div><span class="sjn">GENS — Natural Sciences <span class="cr-badge">3 CH</span><span class="pr-badge">2+1</span></span><span class="sjd">General science concepts with a practical component</span></div></div><span class="sjch">▼</span></div><div class="sjlk"><div class="slkg">
+          <a href="YOUR_LINK_GENS_MCQ" target="_blank" class="sl2 sl-mcq"><span class="slic">📝</span> MCQ Bank</a>
+          <a href="YOUR_LINK_GENS_PAST" target="_blank" class="sl2 sl-past"><span class="slic">📄</span> Past Paper</a>
+          <a href="YOUR_LINK_GENS_PRACTICAL" target="_blank" class="sl2 sl-prac"><span class="slic">🔬</span> Practical</a>
+          <a href="YOUR_LINK_GENS_BOOKS" target="_blank" class="sl2 sl-book"><span class="slic">📚</span> Books &amp; Notes</a>
+        </div></div></div>
+
+        <div class="sjc"><div class="sjh" onclick="tS(this)"><div class="sjl"><span class="sji">🎨</span><div><span class="sjn">GEAH — Arts and Humanities <span class="cr-badge">2 CH</span></span><span class="sjd">Humanities perspective, critical &amp; creative thinking</span></div></div><span class="sjch">▼</span></div><div class="sjlk"><div class="slkg">
+          <a href="YOUR_LINK_GEAH_MCQ" target="_blank" class="sl2 sl-mcq"><span class="slic">📝</span> MCQ Bank</a>
+          <a href="YOUR_LINK_GEAH_PAST" target="_blank" class="sl2 sl-past"><span class="slic">📄</span> Past Paper</a>
+          <a href="YOUR_LINK_GEAH_BOOKS" target="_blank" class="sl2 sl-book"><span class="slic">📚</span> Books &amp; Notes</a>
+        </div></div></div>
+
+        <div class="sjc"><div class="sjh" onclick="tS(this)"><div class="sjl"><span class="sji">🇵🇰</span><div><span class="sjn">GEICP — Ideology and Constitution of Pakistan <span class="cr-badge">2 CH</span></span><span class="sjd">National ideology, constitutional history &amp; structure</span></div></div><span class="sjch">▼</span></div><div class="sjlk"><div class="slkg">
+          <a href="YOUR_LINK_GEICP_MCQ" target="_blank" class="sl2 sl-mcq"><span class="slic">📝</span> MCQ Bank</a>
+          <a href="YOUR_LINK_GEICP_PAST" target="_blank" class="sl2 sl-past"><span class="slic">📄</span> Past Paper</a>
+          <a href="YOUR_LINK_GEICP_BOOKS" target="_blank" class="sl2 sl-book"><span class="slic">📚</span> Books &amp; Notes</a>
+        </div></div></div>
+
+        <div class="sjc"><div class="sjh" onclick="tS(this)"><div class="sjl"><span class="sji">☪️</span><div><span class="sjn">Islamic Studies / Ethics <span class="cr-badge">2 CH</span></span><span class="sjd">Islamic teachings and ethics, or comparative ethics for non-Muslim students</span></div></div><span class="sjch">▼</span></div><div class="sjlk"><div class="slkg">
+          <a href="YOUR_LINK_ISL_MCQ" target="_blank" class="sl2 sl-mcq"><span class="slic">📝</span> MCQ Bank</a>
+          <a href="YOUR_LINK_ISL_PAST" target="_blank" class="sl2 sl-past"><span class="slic">📄</span> Past Paper</a>
+          <a href="YOUR_LINK_ISL_BOOKS" target="_blank" class="sl2 sl-book"><span class="slic">📚</span> Books &amp; Notes</a>
+        </div></div></div>
+
+        <!-- IDC-1 — nested module with 3 sub-subjects -->
+        <div class="sjc"><div class="sjh" onclick="tS(this)"><div class="sjl"><span class="sji">🧬</span><div><span class="sjn">IDC-1 — Basic Science Foundation Module <span class="cr-badge">3 CH</span></span><span class="sjd">Biochemistry, Anatomy &amp; Physiology combined module</span></div></div><span class="sjch">▼</span></div>
+          <div class="sjlk">
+            <div class="module-note">📦 This module contains 3 subjects — click each to view its resources</div>
+            <div class="subsubjects">
+
+              <div class="subsub-card"><div class="subsub-header" onclick="tS(this)"><div class="subsub-left"><span class="subsub-icon">⚗️</span><span class="subsub-name">Biochemistry</span></div><span class="subsub-chevron">▼</span></div><div class="subsub-links"><div class="slkg">
+                <a href="YOUR_LINK_BIOCHEM_MCQ" target="_blank" class="sl2 sl-mcq"><span class="slic">📝</span> MCQ Bank</a>
+                <a href="YOUR_LINK_BIOCHEM_PAST" target="_blank" class="sl2 sl-past"><span class="slic">📄</span> Past Paper</a>
+                <a href="YOUR_LINK_BIOCHEM_BOOKS" target="_blank" class="sl2 sl-book"><span class="slic">📚</span> Books &amp; Notes</a>
+              </div></div></div>
+
+              <div class="subsub-card"><div class="subsub-header" onclick="tS(this)"><div class="subsub-left"><span class="subsub-icon">🦴</span><span class="subsub-name">Anatomy</span></div><span class="subsub-chevron">▼</span></div><div class="subsub-links"><div class="slkg">
+                <a href="YOUR_LINK_ANATOMY_MCQ" target="_blank" class="sl2 sl-mcq"><span class="slic">📝</span> MCQ Bank</a>
+                <a href="YOUR_LINK_ANATOMY_PAST" target="_blank" class="sl2 sl-past"><span class="slic">📄</span> Past Paper</a>
+                <a href="YOUR_LINK_ANATOMY_BOOKS" target="_blank" class="sl2 sl-book"><span class="slic">📚</span> Books &amp; Notes</a>
+              </div></div></div>
+
+              <div class="subsub-card"><div class="subsub-header" onclick="tS(this)"><div class="subsub-left"><span class="subsub-icon">⚡</span><span class="subsub-name">Physiology</span></div><span class="subsub-chevron">▼</span></div><div class="subsub-links"><div class="slkg">
+                <a href="YOUR_LINK_PHYSIO_MCQ" target="_blank" class="sl2 sl-mcq"><span class="slic">📝</span> MCQ Bank</a>
+                <a href="YOUR_LINK_PHYSIO_PAST" target="_blank" class="sl2 sl-past"><span class="slic">📄</span> Past Paper</a>
+                <a href="YOUR_LINK_PHYSIO_BOOKS" target="_blank" class="sl2 sl-book"><span class="slic">📚</span> Books &amp; Notes</a>
+              </div></div></div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="sjc"><div class="sjh" onclick="tS(this)"><div class="sjl"><span class="sji">📓</span><div><span class="sjn">PERL-I <span class="cr-badge">1 CH</span></span><span class="sjd">Introductory reflective learning &amp; portfolio basics</span></div></div><span class="sjch">▼</span></div><div class="sjlk"><div class="slkg">
+          <a href="YOUR_LINK_PERL1_MCQ" target="_blank" class="sl2 sl-mcq"><span class="slic">📝</span> MCQ Bank</a>
+          <a href="YOUR_LINK_PERL1_PAST" target="_blank" class="sl2 sl-past"><span class="slic">📄</span> Past Paper</a>
+          <a href="YOUR_LINK_PERL1_BOOKS" target="_blank" class="sl2 sl-book"><span class="slic">📚</span> Books &amp; Notes</a>
+        </div></div></div>
+
+      </div>
+    </div>
     <div class="smp" id="panel-2"><div class="smph"><div class="smpt">Semester 2 — Coming Soon</div></div><p style="color:var(--muted);font-size:0.9rem">Resources are being prepared. Contact us for guidance in the meantime.</p></div>
 
     <!-- SEM 3 -->
